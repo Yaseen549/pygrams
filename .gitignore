@@ -1,0 +1,8 @@
+/__pycache__
+upinst
+
+.idea
+
+test.py
+/dist
+/pygrams.egg-info
