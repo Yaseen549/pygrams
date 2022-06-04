@@ -2,11 +2,27 @@
 Basic Python Programs that you need
 
 - oddOrEven()
-- evenNumbers()
-- evenNumbersInRange()
 
-- oddNumbers()
-- oddNumbersInRange()
+- isEven()
+- isOdd()
+- isPrime()
+
+- isEvenNumberExist()
+- isOddNumberExist()
+- isPrimeNumberExist()
+
+- getEvenNumbers()
+- getEvenNumbersInRange()
+
+- getOddNumbers()
+- getOddNumbersInRange()
+
+- getPrimeNumbersInRange()
+- getPrimeNumbers()
+
+- takeEvensOut()/ getEvenValues()
+- takeOddsOut() / getOddValues()
+- takePrimesOut()
 
 - isLeapYear()
 - daysInMonth()
@@ -15,14 +31,10 @@ Basic Python Programs that you need
 - fibonacci()
 - factorial()
 - isArmstrong()
-- isPrime()
-- primeNumbersInRange()
-- primeNumbers()
-- takePrimesOut()
-- isPrimeExist()
+
 - swap()
-- takeEvensOut()
-- takeOddsOut()
+
+- randomInt()
 
 is the anything missed? <a href="https://github.com/Yaseen549/pygrams/issues/new">Raise an Issue</a>.
 
