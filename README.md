@@ -1,41 +1,44 @@
 <div align=left>
 Basic Python Programs that you need
 
-- oddOrEven()
+```
+oddOrEven()
 
-- isEven()
-- isOdd()
-- isPrime()
+isEven()
+isOdd()
+isPrime()
 
-- isEvenNumberExist()
-- isOddNumberExist()
-- isPrimeNumberExist()
+isEvenNumberExist()
+isOddNumberExist()
+isPrimeNumberExist()
 
-- getEvenNumbers()
-- getOddNumbers()
-- getPrimeNumbers()
+getEvenNumbers()
+getOddNumbers()
+getPrimeNumbers()
 
-- getEvenNumbersInRange()
-- getOddNumbersInRange()
-- getPrimeNumbersInRange()
+getEvenNumbersInRange()
+getOddNumbersInRange()
+getPrimeNumbersInRange()
 
-- getEvenValues()
-- getOddValues()
+getEvenValues()
+getOddValues()
 
-- isLeapYear()
-- daysInMonth()
-- bmi()
-- fizzBuzz()
-- fibonacci()
-- factorial()
-- isArmstrong()
+isLeapYear()
+daysInMonth()
+bmi()
+fizzBuzz()
+fibonacci()
+factorial()
+isArmstrong()
 
-- swap()
+swap()
+```
 
 
-is the anything missed? <a href="https://github.com/Yaseen549/pygrams/issues/new">Raise an Issue</a>.
+is there any program missed? <a href="https://github.com/Yaseen549/pygrams/issues/new">Raise an Issue</a>.
 
 ### Contribution Guide
+if you are willing to contribute, here are the steps
 1. Fork the Repo.
 2. clone the Repo. (git clone REPO)
 3. Create a new remote for the upstream repository. (git remote add upstream REPO)
@@ -45,9 +48,18 @@ is the anything missed? <a href="https://github.com/Yaseen549/pygrams/issues/new
 7. Push the changes to your repository. (git push -u origin my-branch)
 8. Create a pull request. (We will review it ASAP)
 
+And That's it, get your name in contribution List
+
 ### Feature Request Process
-- Title: Program Name
-- Description: Add the description how the function works or
-- Write the complete program and the comments which explains the program
-<a href="https://github.com/Yaseen549/pygrams/issues/new">Request here</a>
+
+Title: Program Name
+
+Description: 
+
+Add the description how the function works 
+
+or
+
+Write the complete program and the comments which explains the program Click
+<a href="https://github.com/Yaseen549/pygrams/issues/new">here to Request</a>
 </div>
