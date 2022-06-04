@@ -28,6 +28,122 @@ def isOdd(number):
         return False
 
 
+def isPrime(num):
+    """Returns True if the list contains prime number else False
+    :returns: bool
+    """
+    if num < 2:
+        return False
+    for n in range(2, (num) - 1):
+        if num % n == 0:
+            return False
+    return True
+
+
+def isEvenNumberExist(listOfNumbers):
+    """Returns True if Even number exist in a list else False
+    :returns: bool
+    """
+    for num in listOfNumbers:
+        if isEven(num):
+            return True
+    else:
+        return False
+
+
+def isOddNumberExist(listOfNumbers):
+    """Returns True if Odd number exist in a list else False
+    :returns: bool
+    """
+    for num in listOfNumbers:
+        if isOdd(num):
+            return True
+    else:
+        return False
+
+
+def isPrimeNumberExist(listOfNumbers):
+    """Returns True if prime number exist in a list else False
+    :returns: bool
+    """
+    for number in listOfNumbers:
+        if isPrime(number):
+            return True
+    else:
+        return False
+
+
+
+def getEvenNumbers(listOfNums):
+    """Returns a list of Even Numbers in a list
+    :returns: list
+    """
+    evenList = []
+    for num in listOfNums:
+        if isEven(num):
+            evenList.append(num)
+    return evenList
+
+
+def getOddNumbers(listOfNums):
+    """Returns a list of Odd Numbers in a list
+    :returns: list
+    """
+    oddList = []
+    for num in listOfNums:
+        if isOdd(num):
+            oddList.append(num)
+    return oddList
+
+
+def getPrimeNumbers(listOfNumbers):
+    """Returns a list of prime numbers from a list
+    :returns: list
+    """
+    listOfPrimeNumbers = []
+    for number in listOfNumbers:
+        if isPrime(number):
+            listOfPrimeNumbers.append(number)
+    return listOfPrimeNumbers
+
+
+
+
+def getEvenNumbersInRange(start, end):
+    """Returns a list of Even Numbers in range
+    :returns: list
+    """
+    evenList = []
+    for num in range(start, end):
+        if isEven(num):
+            evenList.append(num)
+    return evenList
+
+
+
+def getOddNumbersInRange(start, end):
+    """Returns a list of Odd Numbers in range
+    :returns: list
+    """
+    evenList = []
+    for num in range(start, end):
+        if isOdd(num):
+            evenList.append(num)
+    return evenList
+
+
+def getPrimeNumbersInRange(lower_value, upper_value):
+    """Returns a list of prime numbers between range
+    :returns: list
+    """
+    listOfPrimeNumbers = []
+    for number in range(lower_value, upper_value + 1):
+        if isPrime(number):
+            listOfPrimeNumbers.append(number)
+    return listOfPrimeNumbers
+
+
+
 
 def getEvenValues(alist):
     """Returns even values from a list
@@ -56,71 +172,6 @@ def getOddValues(alist):
         oddValues.append(alist[numbs])
     return oddValues
 
-
-def isEvenNumberExist(listOfNumbers):
-    """Returns True if Even number exist in a list else False
-    :returns: bool
-    """
-    for num in listOfNumbers:
-        if isEven(num):
-            return True
-    else:
-        return False
-
-
-def isOddNumberExist(listOfNumbers):
-    """Returns True if Odd number exist in a list else False
-    :returns: bool
-    """
-    for num in listOfNumbers:
-        if isOdd(num):
-            return True
-    else:
-        return False
-
-
-def getEvenNumbers(listOfNums):
-    """Returns a list of Even Numbers in a list
-    :returns: list
-    """
-    evenList = []
-    for num in listOfNums:
-        if isEven(num):
-            evenList.append(num)
-    return evenList
-
-
-def getEvenNumbersInRange(start, end):
-    """Returns a list of Even Numbers in range
-    :returns: list
-    """
-    evenList = []
-    for num in range(start, end):
-        if isEven(num):
-            evenList.append(num)
-    return evenList
-
-
-def getOddNumbers(listOfNums):
-    """Returns a list of Odd Numbers in a list
-    :returns: list
-    """
-    oddList = []
-    for num in listOfNums:
-        if isOdd(num):
-            oddList.append(num)
-    return oddList
-
-
-def getOddNumbersInRange(start, end):
-    """Returns a list of Odd Numbers in range
-    :returns: list
-    """
-    evenList = []
-    for num in range(start, end):
-        if isOdd(num):
-            evenList.append(num)
-    return evenList
 
 
 def isLeapYear(year):
@@ -211,50 +262,6 @@ def isArmstrong(num):
         return True
     else:
         return False
-
-
-def isPrime(num):
-    """Returns True if the list contains prime number else False
-    :returns: bool
-    """
-    if num < 2:
-        return False
-    for n in range(2, (num) - 1):
-        if num % n == 0:
-            return False
-    return True
-
-
-def isPrimeNumberExist(listOfNumbers):
-    """Returns True if prime number exist in a list else False
-    :returns: bool
-    """
-    for number in listOfNumbers:
-        if isPrime(number):
-            return True
-    else:
-        return False
-
-def getPrimeNumbers(listOfNumbers):
-    """Returns a list of prime numbers from a list
-    :returns: list
-    """
-    listOfPrimeNumbers = []
-    for number in listOfNumbers:
-        if isPrime(number):
-            listOfPrimeNumbers.append(number)
-    return listOfPrimeNumbers
-
-
-def getPrimeNumbersInRange(lower_value, upper_value):
-    """Returns a list of prime numbers between range
-    :returns: list
-    """
-    listOfPrimeNumbers = []
-    for number in range(lower_value, upper_value + 1):
-        if isPrime(number):
-            listOfPrimeNumbers.append(number)
-    return listOfPrimeNumbers
 
 
 def swap(value1, value2):

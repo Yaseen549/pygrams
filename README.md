@@ -12,17 +12,15 @@ Basic Python Programs that you need
 - isPrimeNumberExist()
 
 - getEvenNumbers()
-- getEvenNumbersInRange()
-
 - getOddNumbers()
-- getOddNumbersInRange()
-
-- getPrimeNumbersInRange()
 - getPrimeNumbers()
 
-- takeEvensOut()/ getEvenValues()
-- takeOddsOut() / getOddValues()
-- takePrimesOut()
+- getEvenNumbersInRange()
+- getOddNumbersInRange()
+- getPrimeNumbersInRange()
+
+- getEvenValues()
+- getOddValues()
 
 - isLeapYear()
 - daysInMonth()
@@ -34,7 +32,6 @@ Basic Python Programs that you need
 
 - swap()
 
-- randomInt()
 
 is the anything missed? <a href="https://github.com/Yaseen549/pygrams/issues/new">Raise an Issue</a>.
 
