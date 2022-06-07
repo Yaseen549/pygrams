@@ -1,4 +1,10 @@
-def oddOrEven(number):
+from pygrams.has import *
+from pygrams.searching_sorting import *
+from datetime import datetime, date
+import inspect
+import random
+
+def isOddOrEven(number):
     """Checks whether the given number is Odd or Even
     :returns: String
     """
@@ -34,39 +40,39 @@ def isPrime(num):
     """
     if num < 2:
         return False
-    for n in range(2, (num) - 1):
+    for n in range(2, num - 1):
         if num % n == 0:
             return False
     return True
 
 
-def isEvenNumberExist(listOfNumbers):
+def isEvenNumberExist(list_of_numbers):
     """Returns True if Even number exist in a list else False
     :returns: bool
     """
-    for num in listOfNumbers:
+    for num in list_of_numbers:
         if isEven(num):
             return True
     else:
         return False
 
 
-def isOddNumberExist(listOfNumbers):
+def isOddNumberExist(list_of_numbers):
     """Returns True if Odd number exist in a list else False
     :returns: bool
     """
-    for num in listOfNumbers:
+    for num in list_of_numbers:
         if isOdd(num):
             return True
     else:
         return False
 
 
-def isPrimeNumberExist(listOfNumbers):
+def isPrimeNumberExist(list_of_numbers):
     """Returns True if prime number exist in a list else False
     :returns: bool
     """
-    for number in listOfNumbers:
+    for number in list_of_numbers:
         if isPrime(number):
             return True
     else:
@@ -74,104 +80,98 @@ def isPrimeNumberExist(listOfNumbers):
 
 
 
-def getEvenNumbers(listOfNums):
+def getEvenNumbers(list_of_numbers):
     """Returns a list of Even Numbers in a list
     :returns: list
     """
-    evenList = []
-    for num in listOfNums:
+    even_list = []
+    for num in list_of_numbers:
         if isEven(num):
-            evenList.append(num)
-    return evenList
+            even_list.append(num)
+    return even_list
 
 
-def getOddNumbers(listOfNums):
+def getOddNumbers(list_of_numbers):
     """Returns a list of Odd Numbers in a list
     :returns: list
     """
-    oddList = []
-    for num in listOfNums:
+    odd_list = []
+    for num in list_of_numbers:
         if isOdd(num):
-            oddList.append(num)
-    return oddList
+            odd_list.append(num)
+    return odd_list
 
 
-def getPrimeNumbers(listOfNumbers):
+def getPrimeNumbers(list_of_numbers):
     """Returns a list of prime numbers from a list
     :returns: list
     """
-    listOfPrimeNumbers = []
-    for number in listOfNumbers:
+    list_of_prime_numbers = []
+    for number in list_of_numbers:
         if isPrime(number):
-            listOfPrimeNumbers.append(number)
-    return listOfPrimeNumbers
-
-
+            list_of_prime_numbers.append(number)
+    return list_of_prime_numbers
 
 
 def getEvenNumbersInRange(start, end):
     """Returns a list of Even Numbers in range
     :returns: list
     """
-    evenList = []
+    even_list = []
     for num in range(start, end):
         if isEven(num):
-            evenList.append(num)
-    return evenList
-
+            even_list.append(num)
+    return even_list
 
 
 def getOddNumbersInRange(start, end):
     """Returns a list of Odd Numbers in range
     :returns: list
     """
-    evenList = []
+    odd_list = []
     for num in range(start, end):
         if isOdd(num):
-            evenList.append(num)
-    return evenList
+            odd_list.append(num)
+    return odd_list
 
 
 def getPrimeNumbersInRange(lower_value, upper_value):
     """Returns a list of prime numbers between range
     :returns: list
     """
-    listOfPrimeNumbers = []
+    list_of_prime_numbers = []
     for number in range(lower_value, upper_value + 1):
         if isPrime(number):
-            listOfPrimeNumbers.append(number)
-    return listOfPrimeNumbers
+            list_of_prime_numbers.append(number)
+    return list_of_prime_numbers
 
 
-
-
-def getEvenValues(alist):
+def getEvenValues(a_list):
     """Returns even values from a list
     :returns: list
     """
-    evenPosition = []
-    evenValues = []
-    for nums in range(0, len(alist)):
-        if isOdd(nums):
-            evenPosition.append(nums)
-    for numbs in evenPosition:
-        evenValues.append(alist[numbs])
-    return evenValues
+    even_position = []
+    even_values = []
+    for position in range(0, len(a_list)):
+        if isOdd(position):
+            even_position.append(position)
+    for even_position_value in even_position:
+        even_values.append(a_list[even_position_value])
+    return even_values
 
 
-def getOddValues(alist):
+def getOddValues(a_list):
     """Returns odd values from a list
     :returns: list
     """
-    oddPosition = []
-    oddValues = []
-    for nums in range(0, len(alist)):
-        if isEven(nums):
-            oddPosition.append(nums)
-    for numbs in oddPosition:
-        oddValues.append(alist[numbs])
-    return oddValues
-
+    odd_position = []
+    odd_values = []
+    for position in range(0, len(a_list)):
+        if isEven(position):
+            odd_position.append(position)
+    for odd_position_value in odd_position:
+        odd_values.append(a_list[odd_position_value])
+    return odd_values
 
 
 def isLeapYear(year):
@@ -212,17 +212,17 @@ def fizzBuzz(start, end):
     """Returns a list of fizzBuzz
     :returns: list
     """
-    fizzBuzzValues = []
+    fizz_buzz_values = []
     for number in range(start, end + 1):
         if number % 3 == 0 and number % 5 == 0:
-            fizzBuzzValues.append("FizzBuzz")
+            fizz_buzz_values.append("FizzBuzz")
         elif number % 3 == 0:
-            fizzBuzzValues.append("Fizz")
+            fizz_buzz_values.append("Fizz")
         elif number % 5 == 0:
-            fizzBuzzValues.append("Buzz")
+            fizz_buzz_values.append("Buzz")
         else:
-            fizzBuzzValues.append(number)
-    return fizzBuzzValues
+            fizz_buzz_values.append(number)
+    return fizz_buzz_values
 
 
 def fibonacci(upto_n):
@@ -230,13 +230,13 @@ def fibonacci(upto_n):
     :returns: list
     """
     n1, n2 = 0, 1
-    fibonacci_nums = [n1, n2]
+    fibonacci_numbers = [n1, n2]
     for i in range(2, upto_n):
         n3 = n1 + n2
         n1 = n2
         n2 = n3
-        fibonacci_nums.append(n3)
-    return fibonacci_nums
+        fibonacci_numbers.append(n3)
+    return fibonacci_numbers
 
 
 def factorial(n):
@@ -246,19 +246,17 @@ def factorial(n):
     return 1 if (n == 1 or n == 0) else n * factorial(n - 1)
 
 
-def isArmstrong(num):
+def isArmstrong(number):
     """Returns True if the list contains an Armstrong Number
     :returns: bool
     """
     sum = 0
-    temp = num
+    temp = number
     while temp > 0:
         digit = temp % 10
         sum += digit ** 3
         temp //= 10
-
-    # display the result
-    if num == sum:
+    if number == sum:
         return True
     else:
         return False
@@ -272,4 +270,159 @@ def swap(value1, value2):
     value1 = value2
     value2 = temp
     return value1, value2
+
+
+def isPositiveOrNegative(value):
+    """Returns Positive else Negative
+    :returns: String
+    """
+    if isPositive(value): return "Positive"
+    if isNegative(value): return "Negative"
+    if isZero(value): return "Zero"
+
+
+def isPositive(value):
+    """Returns 'True' if given value is positive(+) else 'False'
+    :param value:
+    :return: bool
+    """
+    if value > 0:
+        return True
+    else: return False
+
+
+def isNegative(value):
+    """Returns 'True' if given value is negative(-) else 'False'
+    :param value:
+    :return: bool
+    """
+    if value < 0:
+        return True
+    else: return False
+
+
+def isZero(value):
+    """Returns 'True' if given value is zero(0) else 'False'
+    :param value:
+    :return: bool
+    """
+    if value == 0:
+        return True
+    else: return False
+
+
+def getUniqueElements(value):
+    """Returns list of unique elements
+    :param value:
+    :return:
+    """
+    return list(set(value))
+
+
+def getSourceCode(program):
+    """Returns a source code of a function or program
+    :param program:
+    :return: string, paragraph
+    """
+    lines = inspect.getsource(program)
+    return lines
+
+
+def generateRandomNumbers(start, end):
+    """Returns a list of random numbers
+    :param start:
+    :param end:
+    :return: list
+    """
+    randomList = []
+    for nums in range(start, end):
+        randomNumbers = random.randint(start, end)
+        randomList.append(randomNumbers)
+    return randomList
+
+
+def generateRandomNumber(start, end):
+    """Returns a random Number
+    :param start:
+    :param end:
+    :return: int
+    """
+    return random.randint(start, end)
+
+
+def count(a_list, number):
+    """Returns a number of occurrence of the given 'number' in 'a_list'
+    :param a_list:
+    :param x:
+    :return: count, int
+    """
+    count = 0
+    for ele in a_list:
+        if (ele == number):
+            count = count + 1
+    return count
+
+
+def getCurrentTime(*args):
+    """Returns current Time:
+    :param args:
+    :return:
+    """
+    now = datetime.now()
+    if len(args) == 3 or len(args) < 1 or len(args) == 0:
+        return now.strftime("%H:%M:%S")
+    elif len(args) == 2:
+        return now.strftime("%H:%M")
+    elif len(args) == 1:
+        return now.strftime("%H")
+
+
+def getTodayDate(dateFormat="ddmmyy"):
+    """Date formats: "ddmmyy", "mdyy", "mddy", "mdy"
+
+    :param dateFormat:
+
+    :return: string
+    """
+    today = date.today()
+
+    if dateFormat == "ddmmyy":
+        # dd/mm/YY
+        d1 = today.strftime("%d/%m/%Y")
+        return d1
+    elif dateFormat == "tmdyy":
+        # Textual month, day and year
+        d2 = today.strftime("%B %d, %Y")
+        return d2
+    elif dateFormat == "mddy":
+        # mm/dd/y
+        d3 = today.strftime("%m/%d/%y")
+        return d3
+    elif dateFormat == "mdy":
+        # Month abbreviation, day and year
+        d4 = today.strftime("%b-%d-%Y")
+        return d4
+    else:
+        d1 = today.strftime("%d/%m/%Y")
+        return d1
+
+
+def generateRandomColor():
+    """Returns a hexa color value with '#' symbol
+    :return : hexa-color"""
+    listOfElements = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"]
+    six_digit_color_cde = "#"
+    for elem in range(0,6):
+        six_digit_color_cde += random.choice(listOfElements)
+    return str(six_digit_color_cde)
+
+
+def reverse(param):
+    """Reversing the given String or List
+    :param param:
+    :return: List, String
+    """
+    return param[::-1]
+
+
 

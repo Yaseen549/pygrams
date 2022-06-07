@@ -54,9 +54,9 @@ And That's it, get your name in contribution List
 
 Title: Program Name
 
-Description: 
+Description:
 
-Add the description how the function works 
+Add the description how the function works
 
 or
 
