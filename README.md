@@ -2,11 +2,16 @@
 Basic Python Programs that you need
 
 ```
-oddOrEven()
+<!-- pygrams.py -->
+isOddOrEven()
+isPositiveOrNegative()
 
 isEven()
 isOdd()
 isPrime()
+isPositive()
+isegative()
+isZero()
 
 isEvenNumberExist()
 isOddNumberExist()
@@ -32,6 +37,47 @@ factorial()
 isArmstrong()
 
 swap()
+count()
+reverse()
+
+getUniqueElements()
+generateRandomNumbers()
+generateRandomNumber()
+getCurrentTime()
+getTodayDate()
+generateRandomColor()
+
+getSourceCode()
+
+<!-- haselemets.py -->
+hasCapitalLetter()
+hasSmallLetter()
+hasUnderscore()
+hasWhiteSpace()
+hasPeriod()
+hasColon()
+hasSemiColon()
+hasComma()
+hasOperator()
+hasNumber()
+hasSymbol()
+hasElement()
+
+<!-- searching.py -->
+binarySearch()
+linearSearch()
+
+<!-- sorting.py -->
+insertionSort()
+bubbleSort()
+selectionSort()
+mergeSort()
+quickSort()
+countingSort()
+radixSort()
+bucketSort()
+heapSort()
+shellSort()
 ```
 
 

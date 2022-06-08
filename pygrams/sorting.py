@@ -196,33 +196,4 @@ def shellSort(array):
         interval //= 2
     return array
 
-
-# Searching
-# Binary Search
-def binarySearch(arr, element_to_search):
-    """Iterative binary search
-    :param arr:
-    :param x:
-    :return: int
-    """
-    low = 0
-    high = len(arr) - 1
-    mid = 0
-    while low <= high:
-        mid = (high + low) // 2
-        if arr[mid] < element_to_search:
-            low = mid + 1
-        elif arr[mid] > element_to_search:
-            high = mid - 1
-        else:
-            return mid
-    return -1
-
-
-# Linear Search
-def linearSearch(arr, element_to_search):
-    for i in range(len(arr)):
-        if arr[i] == element_to_search:
-            return i
-    return -1
-
+# Credits to GeeksforGeeks & TutorialsPoint

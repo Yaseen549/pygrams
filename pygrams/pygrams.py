@@ -1,11 +1,14 @@
-from pygrams.has import *
-from pygrams.searching_sorting import *
+from pygrams.haselements import *
+from pygrams.sorting import *
+from pygrams.searching import *
 from datetime import datetime, date
 import inspect
 import random
 
+
 def isOddOrEven(number):
     """Checks whether the given number is Odd or Even
+
     :returns: String
     """
     if (number % 2) == 0:
@@ -16,6 +19,7 @@ def isOddOrEven(number):
 
 def isEven(number):
     """Checks whether the given number is Even else False
+
     :returns: bool
     """
     if number % 2 == 0:
@@ -26,6 +30,7 @@ def isEven(number):
 
 def isOdd(number):
     """Checks whether the given number is Odd else False
+
     :returns: bool
     """
     if number % 2 != 0:
@@ -36,6 +41,7 @@ def isOdd(number):
 
 def isPrime(num):
     """Returns True if the list contains prime number else False
+
     :returns: bool
     """
     if num < 2:
@@ -48,6 +54,7 @@ def isPrime(num):
 
 def isEvenNumberExist(list_of_numbers):
     """Returns True if Even number exist in a list else False
+
     :returns: bool
     """
     for num in list_of_numbers:
@@ -59,6 +66,7 @@ def isEvenNumberExist(list_of_numbers):
 
 def isOddNumberExist(list_of_numbers):
     """Returns True if Odd number exist in a list else False
+
     :returns: bool
     """
     for num in list_of_numbers:
@@ -70,6 +78,7 @@ def isOddNumberExist(list_of_numbers):
 
 def isPrimeNumberExist(list_of_numbers):
     """Returns True if prime number exist in a list else False
+
     :returns: bool
     """
     for number in list_of_numbers:
@@ -82,6 +91,7 @@ def isPrimeNumberExist(list_of_numbers):
 
 def getEvenNumbers(list_of_numbers):
     """Returns a list of Even Numbers in a list
+
     :returns: list
     """
     even_list = []
@@ -93,6 +103,7 @@ def getEvenNumbers(list_of_numbers):
 
 def getOddNumbers(list_of_numbers):
     """Returns a list of Odd Numbers in a list
+
     :returns: list
     """
     odd_list = []
@@ -104,6 +115,7 @@ def getOddNumbers(list_of_numbers):
 
 def getPrimeNumbers(list_of_numbers):
     """Returns a list of prime numbers from a list
+
     :returns: list
     """
     list_of_prime_numbers = []
@@ -115,6 +127,7 @@ def getPrimeNumbers(list_of_numbers):
 
 def getEvenNumbersInRange(start, end):
     """Returns a list of Even Numbers in range
+
     :returns: list
     """
     even_list = []
@@ -126,6 +139,7 @@ def getEvenNumbersInRange(start, end):
 
 def getOddNumbersInRange(start, end):
     """Returns a list of Odd Numbers in range
+
     :returns: list
     """
     odd_list = []
@@ -137,6 +151,7 @@ def getOddNumbersInRange(start, end):
 
 def getPrimeNumbersInRange(lower_value, upper_value):
     """Returns a list of prime numbers between range
+
     :returns: list
     """
     list_of_prime_numbers = []
@@ -148,6 +163,7 @@ def getPrimeNumbersInRange(lower_value, upper_value):
 
 def getEvenValues(a_list):
     """Returns even values from a list
+
     :returns: list
     """
     even_position = []
@@ -162,6 +178,7 @@ def getEvenValues(a_list):
 
 def getOddValues(a_list):
     """Returns odd values from a list
+
     :returns: list
     """
     odd_position = []
@@ -176,6 +193,7 @@ def getOddValues(a_list):
 
 def isLeapYear(year):
     """Returns boolean value based on the given year
+
     :returns: bool
     """
     if year % 4 == 0:
@@ -192,6 +210,7 @@ def isLeapYear(year):
 
 def daysInMonth(year, month):
     """Returns number of days in a given year and month
+
     :returns: int
     """
     month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -202,6 +221,7 @@ def daysInMonth(year, month):
 
 def bmi(height_in_cm, weight_in_kg):
     """Returns a Body Mass Index (BMI) value
+
     :returns: float or int
     """
     bmi_value = round(weight_in_kg / (height_in_cm * height_in_cm))
@@ -210,6 +230,7 @@ def bmi(height_in_cm, weight_in_kg):
 
 def fizzBuzz(start, end):
     """Returns a list of fizzBuzz
+
     :returns: list
     """
     fizz_buzz_values = []
@@ -227,6 +248,7 @@ def fizzBuzz(start, end):
 
 def fibonacci(upto_n):
     """Returns a list of Fibonacci Sequence
+
     :returns: list
     """
     n1, n2 = 0, 1
@@ -241,6 +263,7 @@ def fibonacci(upto_n):
 
 def factorial(n):
     """Returns a list of factorial numbers up to N
+
     :returns: int
     """
     return 1 if (n == 1 or n == 0) else n * factorial(n - 1)
@@ -248,6 +271,7 @@ def factorial(n):
 
 def isArmstrong(number):
     """Returns True if the list contains an Armstrong Number
+
     :returns: bool
     """
     sum = 0
@@ -264,12 +288,27 @@ def isArmstrong(number):
 
 def swap(value1, value2):
     """Swap two values eg: a=10, b=20 | a, b = swap(a, b) | print(a, b)
+
     :returns: Integer
     """
     temp = value1
     value1 = value2
     value2 = temp
     return value1, value2
+
+
+def count(a_list, element):
+    """Returns a number of occurrence of the given 'number' in 'a_list'
+
+    :param a_list:
+    :param element:
+    :return: count, int
+    """
+    count = 0
+    for ele in a_list:
+        if (ele == element):
+            count = count + 1
+    return count
 
 
 def isPositiveOrNegative(value):
@@ -283,6 +322,7 @@ def isPositiveOrNegative(value):
 
 def isPositive(value):
     """Returns 'True' if given value is positive(+) else 'False'
+
     :param value:
     :return: bool
     """
@@ -293,6 +333,7 @@ def isPositive(value):
 
 def isNegative(value):
     """Returns 'True' if given value is negative(-) else 'False'
+
     :param value:
     :return: bool
     """
@@ -303,6 +344,7 @@ def isNegative(value):
 
 def isZero(value):
     """Returns 'True' if given value is zero(0) else 'False'
+
     :param value:
     :return: bool
     """
@@ -313,23 +355,16 @@ def isZero(value):
 
 def getUniqueElements(value):
     """Returns list of unique elements
+
     :param value:
     :return:
     """
     return list(set(value))
 
 
-def getSourceCode(program):
-    """Returns a source code of a function or program
-    :param program:
-    :return: string, paragraph
-    """
-    lines = inspect.getsource(program)
-    return lines
-
-
 def generateRandomNumbers(start, end):
     """Returns a list of random numbers
+
     :param start:
     :param end:
     :return: list
@@ -343,6 +378,7 @@ def generateRandomNumbers(start, end):
 
 def generateRandomNumber(start, end):
     """Returns a random Number
+
     :param start:
     :param end:
     :return: int
@@ -350,23 +386,11 @@ def generateRandomNumber(start, end):
     return random.randint(start, end)
 
 
-def count(a_list, number):
-    """Returns a number of occurrence of the given 'number' in 'a_list'
-    :param a_list:
-    :param x:
-    :return: count, int
-    """
-    count = 0
-    for ele in a_list:
-        if (ele == number):
-            count = count + 1
-    return count
-
-
 def getCurrentTime(*args):
     """Returns current Time:
+
     :param args:
-    :return:
+    :return: dateTime
     """
     now = datetime.now()
     if len(args) == 3 or len(args) < 1 or len(args) == 0:
@@ -381,7 +405,6 @@ def getTodayDate(dateFormat="ddmmyy"):
     """Date formats: "ddmmyy", "mdyy", "mddy", "mdy"
 
     :param dateFormat:
-
     :return: string
     """
     today = date.today()
@@ -409,7 +432,9 @@ def getTodayDate(dateFormat="ddmmyy"):
 
 def generateRandomColor():
     """Returns a hexa color value with '#' symbol
-    :return : hexa-color"""
+
+    :return: string
+    """
     listOfElements = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"]
     six_digit_color_cde = "#"
     for elem in range(0,6):
@@ -419,10 +444,18 @@ def generateRandomColor():
 
 def reverse(param):
     """Reversing the given String or List
+
     :param param:
-    :return: List, String
+    :return: List
     """
     return param[::-1]
 
 
+def getSourceCode(program):
+    """Returns a source code of a function or program
 
+    :param program:
+    :return: string, paragraph
+    """
+    lines = inspect.getsource(program)
+    return lines
