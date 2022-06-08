@@ -1,10 +1,10 @@
 <p align="center">
   <a href="https://syberstar.netlify.com/">
-    <img src="https://github.com/Yaseen549/pygrams/blob/main/img/pygramsLogo.png" alt="PyScript.js logo" width="165" height="165">
+    <img src="https://github.com/Yaseen549/pygrams/blob/main/img/pygramsLogoMain.png" alt="Pygrams logo" width="165" height="165">
   </a>
 </p>
 
-<h3 align="center">PyScript.js</h3>
+<h3 align="center">PyGrams</h3>
 
 <p align="center">
 The Python Package to get all your hustling Programs in one CodeBase
@@ -16,8 +16,7 @@ Several quick start options are available:
 
 - [Download the latest release](https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.11.zip)
 - Clone the repo: `git clone https://github.com/Yaseen549/pygrams.git`
-- Install with [npm](https://www.npmjs.com/): `npm i pygrams`
-- Install with [yarn](https://www.yarnpkg.com): `yarn add pygrams`
+- Install with [pypi](https://www.pypi.org/): `pip install pygrams`
 
 Read the [Getting started page](https://pygrams.syberstar.com/) for information on the Library contents, examples, and more.
 
