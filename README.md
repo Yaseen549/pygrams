@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://syberstar.netlify.com/">
-    <img src="https://github.com/Yaseen549/pygrams/blob/main/imgs/pygramsLogo.png" alt="PyScript.js logo" width="165" height="165">
+    <img src="https://github.com/Yaseen549/pygrams/blob/main/img/pygramsLogo.png" alt="PyScript.js logo" width="165" height="165">
   </a>
 </p>
 
