@@ -1,6 +1,7 @@
 <p align="center">
   <a href="https://syberstar.netlify.com/">
-    <img src="https://github.com/Yaseen549/pygrams/blob/main/img/pygramsLogoMain.png" alt="Pygrams logo" width="165" height="165">
+    <img src="https://github.com/Yaseen549/pygrams/blob/main/img/pygramsLogoMain.png" alt="Pygrams logo" width="225" height="165">
+
   </a>
 </p>
 
