@@ -49,6 +49,10 @@ generateRandomColor()
 
 getSourceCode()
 
+charList()
+wordList()
+joinList()
+
 <!-- haselemets.py -->
 hasCapitalLetter()
 hasSmallLetter()
