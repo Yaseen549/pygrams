@@ -1,89 +1,33 @@
-<div align=left>
-Basic Python Programs that you need
+<p align="center">
+  <a href="https://syberstar.netlify.com/">
+    <img src="https://github.com/Yaseen549/pygrams/blob/main/imgs/pygramsLogo.png" alt="PyScript.js logo" width="165" height="165">
+  </a>
+</p>
 
-```
-<!-- pygrams.py -->
-isOddOrEven()
-isPositiveOrNegative()
+<h3 align="center">PyScript.js</h3>
 
-isEven()
-isOdd()
-isPrime()
-isPositive()
-isegative()
-isZero()
+<p align="center">
+The Python Package to get all your hustling Programs in one CodeBase
+</p>
 
-isEvenNumberExist()
-isOddNumberExist()
-isPrimeNumberExist()
 
-getEvenNumbers()
-getOddNumbers()
-getPrimeNumbers()
+### Quick start
+Several quick start options are available:
 
-getEvenNumbersInRange()
-getOddNumbersInRange()
-getPrimeNumbersInRange()
+- [Download the latest release](https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.11.zip)
+- Clone the repo: `git clone https://github.com/Yaseen549/pygrams.git`
+- Install with [npm](https://www.npmjs.com/): `npm i pygrams`
+- Install with [yarn](https://www.yarnpkg.com): `yarn add pygrams`
 
-getEvenValues()
-getOddValues()
+Read the [Getting started page](https://pygrams.syberstar.com/) for information on the Library contents, examples, and more.
 
-isLeapYear()
-daysInMonth()
-bmi()
-fizzBuzz()
-fibonacci()
-factorial()
-isArmstrong()
 
-swap()
-count()
-reverse()
+### What's included
+Within the download you'll find the following directories and files, logically grouping common assets. You'll see something like this:
 
-getUniqueElements()
-generateRandomNumbers()
-generateRandomNumber()
-getCurrentTime()
-getTodayDate()
-generateRandomColor()
+## Bugs and feature requests
 
-getSourceCode()
-
-charList()
-wordList()
-joinList()
-
-<!-- haselemets.py -->
-hasCapitalLetter()
-hasSmallLetter()
-hasUnderscore()
-hasWhiteSpace()
-hasPeriod()
-hasColon()
-hasSemiColon()
-hasComma()
-hasOperator()
-hasNumber()
-hasSymbol()
-hasElement()
-
-<!-- searching.py -->
-binarySearch()
-linearSearch()
-
-<!-- sorting.py -->
-insertionSort()
-bubbleSort()
-selectionSort()
-mergeSort()
-quickSort()
-countingSort()
-radixSort()
-bucketSort()
-heapSort()
-shellSort()
-```
-
+Have a bug or a feature request? Please first search for existing and closed [issues](https://github.com/Yaseen549/pygrams/issues). If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Yaseen549/pygrams/issues/new).
 
 is there any program missed? <a href="https://github.com/Yaseen549/pygrams/issues/new">Raise an Issue</a>.
 
