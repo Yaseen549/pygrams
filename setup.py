@@ -9,7 +9,7 @@ readme = (here / "README.md").read_text()
 setup(
   name = 'pygrams',
   packages = ['pygrams'],
-  version = '0.0.10',
+  version = '0.0.11',
   license='MIT',
   description = 'Get python programs handy as a function',
   long_description=readme,
@@ -17,7 +17,7 @@ setup(
   author = 'Yaseen',
   author_email = 'fantasticyaseenshariff@gmail.com',
   url = 'https://syberstar.com',
-  download_url = 'https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.10.tar.gz',
+  download_url = 'https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.11.tar.gz',
   keywords = ['PYTHONPROGRAMS', 'PROGRAMS', 'FUNCTIONS', 'PYGRAMS'],
   install_requires=[],
   classifiers=[
