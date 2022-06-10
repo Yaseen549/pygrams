@@ -253,12 +253,12 @@ def daysInMonth(year, month):
     return month_days[month - 1]
 
 
-def bmi(height_in_inch, weight_in_kg):
+def bmi(height_in_meter, weight_in_kg):
     """Returns a Body Mass Index (BMI) value
 
     :returns: float or int
     """
-    bmi_value = round(weight_in_kg / (height_in_inch * height_in_inch))
+    bmi_value = round(weight_in_kg / (height_in_meter * height_in_meter))
     return bmi_value
 
 
