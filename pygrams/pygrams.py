@@ -166,6 +166,12 @@ def getEvenValues(a_list):
 
     :returns: list
     """
+    string_list = []
+    if a_list == str(a_list):
+        for eachString in a_list:
+            if isOdd(a_list.index(eachString)):
+                string_list.append(eachString)
+        return string_list
     even_position = []
     even_values = []
     for position in range(0, len(a_list)):
@@ -181,6 +187,12 @@ def getOddValues(a_list):
 
     :returns: list
     """
+    string_list = []
+    if a_list == str(a_list):
+        for eachString in a_list:
+            if isEven(a_list.index(eachString)):
+                string_list.append(eachString)
+        return string_list
     odd_position = []
     odd_values = []
     for position in range(0, len(a_list)):
@@ -189,6 +201,28 @@ def getOddValues(a_list):
     for odd_position_value in odd_position:
         odd_values.append(a_list[odd_position_value])
     return odd_values
+
+
+
+def getPrimeValues(a_list):
+    """Returns Prime values from a list
+
+    :returns: list
+    """
+    string_list = []
+    if a_list == str(a_list):
+        for eachString in a_list:
+            if isPrime(a_list.index(eachString)):
+                string_list.append(eachString)
+        return string_list
+    prime_position = []
+    prime_values = []
+    for position in range(0, len(a_list)):
+        if isPrime(position):
+            prime_position.append(position-1)
+    for prime_position_value in prime_position:
+        prime_values.append(a_list[prime_position_value])
+    return prime_values
 
 
 def isLeapYear(year):
@@ -219,12 +253,12 @@ def daysInMonth(year, month):
     return month_days[month - 1]
 
 
-def bmi(height_in_cm, weight_in_kg):
+def bmi(height_in_inch, weight_in_kg):
     """Returns a Body Mass Index (BMI) value
 
     :returns: float or int
     """
-    bmi_value = round(weight_in_kg / (height_in_cm * height_in_cm))
+    bmi_value = round(weight_in_kg / (height_in_inch * height_in_inch))
     return bmi_value
 
 
@@ -487,3 +521,4 @@ def joinList(list_of_words):
     :return: list
     """
     return " ".join(list_of_words)
+
