@@ -9,7 +9,7 @@ readme = (here / "README.md").read_text()
 setup(
   name = 'pygrams',
   packages = ['pygrams'],
-  version = '0.0.12',
+  version = '0.0.14',
   license='MIT',
   description = 'Get python programs handy as a function',
   long_description=readme,

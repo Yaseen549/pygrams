@@ -16,7 +16,7 @@ The Python Package to get all your hustling Programs in one CodeBase
 ### Quick start
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.12.zip)
+- [Download the latest release](https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.14.zip)
 - Clone the repo: `git clone https://github.com/Yaseen549/pygrams.git`
 - Install with [pypi](https://www.pypi.org/): `pip install pygrams`
 
@@ -32,7 +32,7 @@ Have a bug or a feature request? Please first search for existing and closed [is
 
 is there any program missed? <a href="https://github.com/Yaseen549/pygrams/issues/new">Raise an Issue</a>.
 
-### Contribution Guide
+### Contribution Guide (Become a Backer)
 if you are willing to contribute, here are the steps
 1. Fork the Repo.
 2. clone the Repo. (git clone REPO)
