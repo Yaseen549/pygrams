@@ -1,8 +1,15 @@
-/__pycache__
-upinst
-
+.vscode
 .idea
 
-test.py
+
+/__pycache__
+/pythonprograms/__pycache__
+
 /dist
 /pygrams.egg-info
+
+upinst
+test.py
+pygrams_test.py
+
+

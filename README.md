@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://syberstar.netlify.com/">
-    <img src="https://github.com/Yaseen549/pygrams/blob/main/img/pygramsLogoMain.png" alt="Pygrams logo" width="250" height="165">
+  <a href="#">
+    <img src="img/pygramsLogoMain.png" alt="Pygrams logo" width="250" height="120">
     <!-- <br>
 <img src="img/pygramsLogoMain.png" alt="Pygrams logo" width="250" height="135"> -->
   </a>
@@ -51,10 +51,7 @@ Title: Program Name
 
 Description:
 
-Add the description how the function works
+Add the description how the function works (or)
 
-or
-
-Write the complete program and the comments which explains the program Click
-<a href="https://github.com/Yaseen549/pygrams/issues/new">here to Request</a>
+Write the complete program and the comments which explains the program. Click <a href="https://github.com/Yaseen549/pygrams/issues/new">here to Request</a>
 </div>
