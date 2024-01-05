@@ -1,8 +1,10 @@
 def isArmstrong(number):
-    """Returns True if the list contains an Armstrong Number
+    """Returns True if the number is an Armstrong Number
 
     :returns: bool
     """
+    if number < 10 and number > 0:
+        return True
     sum = 0
     temp = number
     while temp > 0:

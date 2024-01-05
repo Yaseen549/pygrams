@@ -1,12 +1,12 @@
 .vscode
 .idea
 
-
 /__pycache__
 /pythonprograms/__pycache__
 
 /dist
 /pygrams.egg-info
+/test
 
 upinst
 test.py

@@ -1,9 +1,9 @@
-from pygrams.getters import *
-from pygrams.generators import *
-from pygrams.haselements import *
-from pygrams.issers import *
-from pygrams.searching import *
-from pygrams.sorting import *
+from pythonprograms.getters import *
+from pythonprograms.generators import *
+from pythonprograms.haselements import *
+from pythonprograms.issers import *
+from pythonprograms.searching import *
+from pythonprograms.sorting import *
 
 
 def daysInMonth(year, month):

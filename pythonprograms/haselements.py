@@ -1,3 +1,17 @@
+from pythonprograms.issers import isArmstrong
+
+
+def hasArmstrong(list_of_numbers):
+    """Checks if list has an Armstrong Number
+
+    :param list_of_numbers:
+    :return: bool
+    """
+    for nums in list_of_numbers:
+        if isArmstrong(nums): return True
+    else: return False
+
+
 def hasCapitalLetter(aString):
     """Checks if it has a Capital Letter
 
