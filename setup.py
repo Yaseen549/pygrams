@@ -1,6 +1,6 @@
 # from distutils.core import setup
 import pathlib
-from setuptools import setup
+from setuptools import setup, find_packages
 
 here = pathlib.Path(__file__).parent
 
@@ -8,16 +8,17 @@ readme = (here / "README.md").read_text()
 
 setup(
   name = 'pygrams',
-  packages = ['pygrams'],
-  version = '0.0.14',
+  # packages = ['pygrams'],
+  packages=find_packages(),  # Automatically finds 'pythonprograms' directory
+  version = '0.0.15',
   license='MIT',
   description = 'Get python programs handy as a function',
   long_description=readme,
   long_description_content_type="text/markdown",
   author = 'Yaseen',
   author_email = 'fantasticyaseenshariff@gmail.com',
-  url = 'https://syberstar.com',
-  download_url = 'https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.12.tar.gz',
+  url = 'https://pygrams.netlify.app',
+  download_url = 'https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.15.tar.gz',
   keywords = ['PYTHONPROGRAMS', 'PROGRAMS', 'FUNCTIONS', 'PYGRAMS'],
   install_requires=[],
   classifiers=[

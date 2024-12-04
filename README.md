@@ -16,7 +16,7 @@ The Python Package to get all your hustling Programs in one CodeBase
 ### Quick start
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.14.zip)
+- [Download the latest release](https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.15.zip)
 - Clone the repo: `git clone https://github.com/Yaseen549/pygrams.git`
 - Install with [pypi](https://www.pypi.org/): `pip install pygrams`
 
@@ -37,10 +37,10 @@ if you are willing to contribute, here are the steps
 1. Fork the Repo.
 2. clone the Repo. (git clone REPO)
 3. Create a new remote for the upstream repository. (git remote add upstream REPO)
-4. Create a new branch. (git checkout -b my-branch)
+4. Create a new branch. (git checkout -b your-branch-name)
 5. Add Codes (git add .)
-6. commit your changes. (git commit -m "Adding an awesome feature to my-branch")
-7. Push the changes to your repository. (git push -u origin my-branch)
+6. commit your changes. (git commit -m "Adding an awesome feature to your-branch-name")
+7. Push the changes to your repository. (git push -u origin your-branch-name)
 8. Create a pull request. (We will review it ASAP)
 
 And That's it, get your name in contribution List
