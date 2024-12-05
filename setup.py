@@ -9,8 +9,8 @@ readme = (here / "README.md").read_text()
 setup(
   name = 'pygrams',
   # packages = ['pygrams'],
-  packages=find_packages(),  # Automatically finds 'pythonprograms' directory
-  version = '0.0.15',
+  packages=find_packages(),  # Automatically finds 'src' directory
+  version = '0.0.16',
   license='MIT',
   description = 'Get python programs handy as a function',
   long_description=readme,
@@ -18,7 +18,7 @@ setup(
   author = 'Yaseen',
   author_email = 'fantasticyaseenshariff@gmail.com',
   url = 'https://pygrams.netlify.app',
-  download_url = 'https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.15.tar.gz',
+  download_url = 'https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.16.tar.gz',
   keywords = ['PYTHONPROGRAMS', 'PROGRAMS', 'FUNCTIONS', 'PYGRAMS'],
   install_requires=[],
   classifiers=[

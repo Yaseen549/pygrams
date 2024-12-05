@@ -1,0 +1,9 @@
+# Include the README file
+include README.md
+
+# Include all files in the 'img' directory (like your logos or other images)
+recursive-include img *
+
+# Include any other necessary files (optional)
+# For example, if you have a LICENSE file, you can include it like this:
+include LICENSE
