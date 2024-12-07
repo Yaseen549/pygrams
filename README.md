@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#">
-    <img src="img/pygramsLogoMain.png" alt="Pygrams logo" width="250" height="100">
+    <img src="https://raw.githubusercontent.com/Yaseen549/pygrams/refs/heads/main/img/pygramsLogoMain.png" alt="Pygrams logo" width="250" height="100">
   </a>
 </p>
 
@@ -16,7 +16,7 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.16.zip)
+- [Download the latest release](https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.21.zip)
 - Clone the repo: `git clone https://github.com/Yaseen549/pygrams.git`
 - Install via [PyPI](https://www.pypi.org/): `pip install pygrams`
 
@@ -30,11 +30,22 @@ Within the download, you'll find the following directories and files, logically 
 
 ```
 pygrams/ 
-├── src/ 
-│   ├── pygrams.py  
+├── pygrams/ 
+│   ├── generators.py
+│   ├── getters.py
+│   ├── haselements.py
+│   ├── issers.py
+│   ├── others.py
+│   ├── pygrams.py
+│   ├── searching.py
+│   ├── sorting.py
 │   └── ... 
+├── .gitignore
+├── LICENSE
+├── MANIFEST.in
 ├── README.md
-└── LICENSE
+├── setup.cfg
+└── setup.py
 ```
 
 This structure includes all the essential programs and supporting documentation files.

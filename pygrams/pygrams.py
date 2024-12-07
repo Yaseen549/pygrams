@@ -1,10 +1,10 @@
-from src.getters import *
-from src.generators import *
-from src.haselements import *
-from src.issers import *
-from src.searching import *
-from src.sorting import *
-from src.others import *
+from pygrams.getters import *
+from pygrams.generators import *
+from pygrams.haselements import *
+from pygrams.issers import *
+from pygrams.searching import *
+from pygrams.sorting import *
+from pygrams.others import *
 
 
 def days_in_a_month(year, month):
