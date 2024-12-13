@@ -615,3 +615,146 @@ def has_element(container, element):
         raise TypeError("The container must be a string or a list.")
     
     return element in container
+
+
+def has_vowel(string):
+    """
+    Checks if a string contains at least one vowel.
+
+    Parameters:
+    ----------
+    string : str
+        The string to check for vowels.
+
+    Returns:
+    -------
+    bool
+        True if the string contains at least one vowel, False otherwise.
+
+    Raises:
+    ------
+    TypeError
+        If the input is not a string.
+
+    Examples:
+    --------
+    >>> has_vowel("hello")
+    True
+
+    >>> has_vowel("sky")
+    False
+    """
+    if not isinstance(string, str):
+        raise TypeError("Input must be a string.")
+    
+    vowels = "aeiouAEIOU"
+    return any(char in vowels for char in string)
+
+
+def has_digit(string):
+    """
+    Verifies if a string contains any digits.
+
+    Parameters:
+    ----------
+    string : str
+        The string to check for digits.
+
+    Returns:
+    -------
+    bool
+        True if the string contains at least one digit, False otherwise.
+
+    Raises:
+    ------
+    TypeError
+        If the input is not a string.
+
+    Examples:
+    --------
+    >>> has_digit("hello123")
+    True
+
+    >>> has_digit("hello")
+    False
+    """
+    if not isinstance(string, str):
+        raise TypeError("Input must be a string.")
+    
+    return any(char.isdigit() for char in string)
+
+
+def has_special_characters(string):
+    """
+    Checks if a string contains any special characters (e.g., @, #, $, etc.).
+
+    Parameters:
+    ----------
+    string : str
+        The string to check for special characters.
+
+    Returns:
+    -------
+    bool
+        True if the string contains any special characters, False otherwise.
+
+    Raises:
+    ------
+    TypeError
+        If the input is not a string.
+
+    Examples:
+    --------
+    >>> has_special_characters("hello@world")
+    True
+
+    >>> has_special_characters("hello")
+    False
+    """
+    if not isinstance(string, str):
+        raise TypeError("Input must be a string.")
+    
+    special_characters = "!@#$%^&*()_+={}:;,.<>?/|\\[]~"
+    return any(char in special_characters for char in string)
+
+
+def has_balanced_brackets(string):
+    """
+    Verifies if the brackets in a string are balanced.
+
+    Parameters:
+    ----------
+    string : str
+        The string containing brackets to check.
+
+    Returns:
+    -------
+    bool
+        True if the string contains balanced brackets, False otherwise.
+
+    Raises:
+    ------
+    TypeError
+        If the input is not a string.
+
+    Examples:
+    --------
+    >>> has_balanced_brackets("{[()()]}")
+    True
+
+    >>> has_balanced_brackets("{[(])}")
+    False
+    """
+    if not isinstance(string, str):
+        raise TypeError("Input must be a string.")
+    
+    stack = []
+    bracket_pairs = {'(': ')', '{': '}', '[': ']'}
+    
+    for char in string:
+        if char in bracket_pairs:
+            stack.append(char)
+        elif char in bracket_pairs.values():
+            if not stack or bracket_pairs[stack.pop()] != char:
+                return False
+    return len(stack) == 0

@@ -6,6 +6,13 @@ from pygrams.searching import *
 from pygrams.sorting import *
 from pygrams.others import *
 
+from pygrams.dataviz import *
+from pygrams.dateandtimeutils import *
+from pygrams.defaultutils import *
+from pygrams.utils.fileutils import *
+from pygrams.mathutils import *
+from pygrams.utils.stringutils import *
+
 
 def days_in_a_month(year, month):
     """
@@ -214,3 +221,100 @@ def reverse(param):
     for i in range(len(param) - 1, -1, -1):
         reversed_param.append(param[i])
     return reversed_param
+
+
+def leap_years_in_range(start, end):
+    """
+    Returns all leap years within a given range.
+
+    Parameters:
+    ----------
+    start : int
+        The start year of the range.
+    end : int
+        The end year of the range.
+
+    Returns:
+    -------
+    list of int
+        List of leap years within the range.
+
+    Raises:
+    ------
+    ValueError
+        If start year is greater than end year.
+
+    Examples:
+    --------
+    >>> leap_years_in_range(2000, 2020)
+    [2000, 2004, 2008, 2012, 2016, 2020]
+    """
+    if start > end:
+        raise ValueError("Start year must not be greater than end year.")
+    
+    leap_years = []
+    for year in range(start, end + 1):
+        if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+            leap_years.append(year)
+    return leap_years
+
+
+def nth_root(number, n):
+    """
+    Calculates the nth root of a number.
+
+    Parameters:
+    ----------
+    number : float
+        The number to find the nth root of.
+    n : int
+        The degree of the root.
+
+    Returns:
+    -------
+    float
+        The nth root of the number.
+
+    Raises:
+    ------
+    ValueError
+        If n is less than or equal to 0.
+
+    Examples:
+    --------
+    >>> nth_root(27, 3)
+    3.0
+    """
+    if n <= 0:
+        raise ValueError("The root degree must be greater than 0.")
+    return number ** (1 / n)
+
+
+def palindrome(string_or_number):
+    """
+    Checks if a string or number is a palindrome.
+
+    Parameters:
+    ----------
+    string_or_number : str or int
+        The string or number to check.
+
+    Returns:
+    -------
+    bool
+        True if it is a palindrome, False otherwise.
+
+    Examples:
+    --------
+    >>> palindrome("radar")
+    True
+
+    >>> palindrome(12321)
+    True
+
+    >>> palindrome("hello")
+    False
+    """
+    s = str(string_or_number)
+    return s == s[::-1]
+

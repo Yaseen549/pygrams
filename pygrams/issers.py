@@ -261,3 +261,153 @@ def describe_number(value):
     if is_negative(value):
         return "Negative"
     return "Zero"
+
+
+def is_anagram(string1, string2):
+    """
+    Checks if two strings are anagrams.
+
+    Parameters:
+    ----------
+    string1 : str
+        The first string to check.
+    string2 : str
+        The second string to check.
+
+    Returns:
+    -------
+    bool
+        True if the strings are anagrams, False otherwise.
+
+    Raises:
+    ------
+    TypeError
+        If the inputs are not strings.
+
+    Examples:
+    --------
+    >>> is_anagram("listen", "silent")
+    True
+
+    >>> is_anagram("hello", "world")
+    False
+    """
+    if not isinstance(string1, str) or not isinstance(string2, str):
+        raise TypeError("Both inputs must be strings.")
+    
+    return sorted(string1) == sorted(string2)
+
+
+def is_palindrome(string_or_number):
+    """
+    Determines if a string or number is a palindrome.
+
+    Parameters:
+    ----------
+    string_or_number : str or int
+        The string or number to check.
+
+    Returns:
+    -------
+    bool
+        True if the string or number is a palindrome, False otherwise.
+
+    Raises:
+    ------
+    TypeError
+        If the input is neither a string nor an integer.
+
+    Examples:
+    --------
+    >>> is_palindrome("madam")
+    True
+
+    >>> is_palindrome(121)
+    True
+
+    >>> is_palindrome("hello")
+    False
+    """
+    if not isinstance(string_or_number, (str, int)):
+        raise TypeError("Input must be a string or an integer.")
+    
+    str_value = str(string_or_number)  # Convert number to string for uniformity
+    return str_value == str_value[::-1]
+
+
+def is_happy_number(number):
+    """
+    Checks if a number is a "happy number."
+
+    Parameters:
+    ----------
+    number : int
+        The number to check.
+
+    Returns:
+    -------
+    bool
+        True if the number is a happy number, False otherwise.
+
+    Raises:
+    ------
+    ValueError
+        If the number is not a positive integer.
+
+    Examples:
+    --------
+    >>> is_happy_number(19)
+    True
+
+    >>> is_happy_number(4)
+    False
+    """
+    if not isinstance(number, int) or number <= 0:
+        raise ValueError("Input must be a positive integer.")
+    
+    def sum_of_squares(n):
+        return sum(int(digit) ** 2 for digit in str(n))
+    
+    seen = set()
+    while number != 1 and number not in seen:
+        seen.add(number)
+        number = sum_of_squares(number)
+    
+    return number == 1
+
+
+import re
+
+def is_valid_email(email):
+    """
+    Validates an email address format.
+
+    Parameters:
+    ----------
+    email : str
+        The email address to validate.
+
+    Returns:
+    -------
+    bool
+        True if the email address is valid, False otherwise.
+
+    Raises:
+    ------
+    TypeError
+        If the email is not a string.
+
+    Examples:
+    --------
+    >>> is_valid_email("test@example.com")
+    True
+
+    >>> is_valid_email("invalid-email")
+    False
+    """
+    if not isinstance(email, str):
+        raise TypeError("Input must be a string.")
+    
+    email_regex = r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)"
+    return re.match(email_regex, email) is not None
+

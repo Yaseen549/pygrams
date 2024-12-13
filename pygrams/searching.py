@@ -62,3 +62,107 @@ def linear_search(arr, element):
             return i
     return -1
 
+
+def ternary_search(sorted_list, target):
+    """
+    A more efficient search algorithm for sorted data by dividing the list into three parts.
+
+    Parameters:
+    ----------
+    sorted_list : list
+        A sorted list of elements.
+    target : int
+        The element to search for.
+
+    Returns:
+    -------
+    int
+        The index of the target element if found, otherwise -1.
+
+    Raises:
+    ------
+    ValueError
+        If the sorted_list is not a list.
+
+    Examples:
+    --------
+    >>> ternary_search([1, 4, 5, 7, 9, 12], 7)
+    3
+
+    >>> ternary_search([1, 4, 5, 7, 9, 12], 10)
+    -1
+    """
+    if not isinstance(sorted_list, list):
+        raise ValueError("The first argument must be a list.")
+    
+    low, high = 0, len(sorted_list) - 1
+    
+    while high >= low:
+        mid1 = low + (high - low) // 3
+        mid2 = high - (high - low) // 3
+        
+        if sorted_list[mid1] == target:
+            return mid1
+        if sorted_list[mid2] == target:
+            return mid2
+        
+        if target < sorted_list[mid1]:
+            high = mid1 - 1
+        elif target > sorted_list[mid2]:
+            low = mid2 + 1
+        else:
+            low = mid1 + 1
+            high = mid2 - 1
+    
+    return -1
+
+
+import math
+
+def jump_search(sorted_list, target):
+    """
+    A search algorithm that works by jumping ahead by a fixed block size and performing a linear search.
+
+    Parameters:
+    ----------
+    sorted_list : list
+        A sorted list of elements.
+    target : int
+        The element to search for.
+
+    Returns:
+    -------
+    int
+        The index of the target element if found, otherwise -1.
+
+    Raises:
+    ------
+    ValueError
+        If the sorted_list is not a list.
+
+    Examples:
+    --------
+    >>> jump_search([1, 4, 5, 7, 9, 12], 7)
+    3
+
+    >>> jump_search([1, 4, 5, 7, 9, 12], 10)
+    -1
+    """
+    if not isinstance(sorted_list, list):
+        raise ValueError("The first argument must be a list.")
+    
+    n = len(sorted_list)
+    step = int(math.sqrt(n))  # Step size
+    
+    prev = 0
+    while sorted_list[min(step, n) - 1] < target:
+        prev = step
+        step += int(math.sqrt(n))
+        if prev >= n:
+            return -1
+    
+    for i in range(prev, min(step, n)):
+        if sorted_list[i] == target:
+            return i
+    
+    return -1

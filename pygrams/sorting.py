@@ -738,3 +738,215 @@ def shell_sort(array):
         gap //= 2  # Reduce the gap size (half the current gap)
 
     return array
+
+
+def gnome_sort(array):
+    """
+    Gnome sort is a simple sorting algorithm that works by comparing each element with 
+    the previous one and swapping them if they are in the wrong order.
+
+    Parameters:
+    ----------
+    array : list
+        The list of elements to sort.
+
+    Returns:
+    -------
+    list
+        The sorted list of elements.
+
+    Examples:
+    --------
+    >>> gnome_sort([5, 3, 8, 6, 2])
+    [2, 3, 5, 6, 8]
+
+    >>> gnome_sort([1, 4, 3, 2, 5])
+    [1, 2, 3, 4, 5]
+    """
+    index = 0
+    while index < len(array):
+        if index == 0 or array[index - 1] <= array[index]:
+            index += 1
+        else:
+            array[index], array[index - 1] = array[index - 1], array[index]
+            index -= 1
+    return array
+
+
+def pancake_sort(array):
+    """
+    Pancake sort is a fun sorting algorithm that works by flipping subarrays to sort the elements.
+
+    Parameters:
+    ----------
+    array : list
+        The list of elements to sort.
+
+    Returns:
+    -------
+    list
+        The sorted list of elements.
+
+    Examples:
+    --------
+    >>> pancake_sort([5, 3, 8, 6, 2])
+    [2, 3, 5, 6, 8]
+
+    >>> pancake_sort([1, 4, 3, 2, 5])
+    [1, 2, 3, 4, 5]
+    """
+    def flip(sub_array, i):
+        return sub_array[:i+1][::-1] + sub_array[i+1:]
+
+    def find_max(array, n):
+        max_index = 0
+        for i in range(1, n):
+            if array[i] > array[max_index]:
+                max_index = i
+        return max_index
+
+    n = len(array)
+    while n > 1:
+        max_index = find_max(array, n)
+        
+        if max_index != n - 1:
+            if max_index > 0:
+                array = flip(array, max_index)
+            array = flip(array, n - 1)
+        
+        n -= 1
+    return array
+
+
+def sort_by_key(data, key_function):
+    """
+    Sorts a list of complex objects (e.g., dictionaries or tuples) based on a custom key function.
+
+    Parameters:
+    ----------
+    data : list
+        A list of elements (objects) to sort.
+    key_function : function
+        A function that extracts a key from each element used for sorting.
+
+    Returns:
+    -------
+    list
+        The sorted list of elements based on the provided key.
+
+    Examples:
+    --------
+    >>> sort_by_key([{"name": "Alice", "age": 25}, {"name": "Bob", "age": 30}], lambda x: x["age"])
+    [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 30}]
+
+    >>> sort_by_key([(1, 2), (3, 1), (2, 4)], lambda x: x[1])
+    [(3, 1), (1, 2), (2, 4)]
+    """
+    return sorted(data, key=key_function)
+
+
+def cocktail_shaker_sort(array):
+    """
+    A variation of bubble sort that sorts in both directions.
+
+    Parameters:
+    ----------
+    array : list
+        The list to be sorted.
+
+    Returns:
+    -------
+    list
+        The sorted list.
+
+    Examples:
+    --------
+    >>> cocktail_shaker_sort([3, 2, 1, 4])
+    [1, 2, 3, 4]
+    """
+    n = len(array)
+    swapped = True
+    start = 0
+    end = n - 1
+
+    while swapped:
+        swapped = False
+        for i in range(start, end):
+            if array[i] > array[i + 1]:
+                array[i], array[i + 1] = array[i + 1], array[i]
+                swapped = True
+        if not swapped:
+            break
+        swapped = False
+        end -= 1
+        for i in range(end - 1, start - 1, -1):
+            if array[i] > array[i + 1]:
+                array[i], array[i + 1] = array[i + 1], array[i]
+                swapped = True
+        start += 1
+    return array
+
+
+def strand_sort(array):
+    """
+    A sorting algorithm based on extracting sorted subsequences.
+
+    Parameters:
+    ----------
+    array : list
+        The list to be sorted.
+
+    Returns:
+    -------
+    list
+        The sorted list.
+
+    Examples:
+    --------
+    >>> strand_sort([4, 3, 1, 2])
+    [1, 2, 3, 4]
+    """
+    if not array:
+        return []
+
+    result = []
+    while array:
+        sublist = [array.pop(0)]
+        i = 0
+        while i < len(array):
+            if array[i] >= sublist[-1]:
+                sublist.append(array.pop(i))
+            else:
+                i += 1
+        result = merge_sorted_lists(result, sublist)
+    return result
+
+
+def merge_sorted_lists(list1, list2):
+    """
+    Helper function to merge two sorted lists.
+
+    Parameters:
+    ----------
+    list1 : list
+        The first sorted list.
+    list2 : list
+        The second sorted list.
+
+    Returns:
+    -------
+    list
+        The merged sorted list.
+    """
+    result = []
+    i = j = 0
+    while i < len(list1) and j < len(list2):
+        if list1[i] <= list2[j]:
+            result.append(list1[i])
+            i += 1
+        else:
+            result.append(list2[j])
+            j += 1
+    result.extend(list1[i:])
+    result.extend(list2[j:])
+    return result

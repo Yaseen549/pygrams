@@ -566,3 +566,160 @@ def get_prime_values(container):
                 prime_values.append((key, value))  # Add key-value pair
     
     return prime_values
+
+
+def get_factorial(n):
+    """
+    Returns the factorial of a number.
+
+    Parameters:
+    ----------
+    n : int
+        The number to compute the factorial for.
+
+    Returns:
+    -------
+    int
+        The factorial of the given number.
+
+    Raises:
+    ------
+    ValueError
+        If the number is negative.
+    TypeError
+        If the input is not an integer.
+
+    Examples:
+    --------
+    >>> get_factorial(5)
+    120
+
+    >>> get_factorial(0)
+    1
+    """
+    if not isinstance(n, int):
+        raise TypeError("Input must be an integer.")
+    
+    if n < 0:
+        raise ValueError("Factorial is not defined for negative numbers.")
+    
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    
+    return result
+
+
+def get_file_extension(filename):
+    """
+    Retrieves the file extension from a filename.
+
+    Parameters:
+    ----------
+    filename : str
+        The name of the file to extract the extension from.
+
+    Returns:
+    -------
+    str
+        The file extension (e.g., 'txt', 'jpg', 'csv').
+
+    Raises:
+    ------
+    ValueError
+        If the filename doesn't have an extension.
+    TypeError
+        If the filename is not a string.
+
+    Examples:
+    --------
+    >>> get_file_extension("document.txt")
+    'txt'
+
+    >>> get_file_extension("image.jpg")
+    'jpg'
+
+    >>> get_file_extension("file")
+    ValueError: No file extension found.
+    """
+    if not isinstance(filename, str):
+        raise TypeError("Input must be a string.")
+    
+    if '.' not in filename:
+        raise ValueError("No file extension found.")
+    
+    return filename.split('.')[-1]
+
+
+def get_substrings(string):
+    """
+    Returns all substrings of a string.
+
+    Parameters:
+    ----------
+    string : str
+        The string to generate substrings from.
+
+    Returns:
+    -------
+    list
+        A list of all substrings of the string.
+
+    Raises:
+    ------
+    TypeError
+        If the input is not a string.
+
+    Examples:
+    --------
+    >>> get_substrings("abc")
+    ['a', 'ab', 'abc', 'b', 'bc', 'c']
+
+    >>> get_substrings("hello")
+    ['h', 'he', 'hel', 'hell', 'hello', 'e', 'el', 'ell', 'ello', 'l', 'll', 'llo', 'l', 'lo', 'o']
+    """
+    if not isinstance(string, str):
+        raise TypeError("Input must be a string.")
+    
+    substrings = []
+    for i in range(len(string)):
+        for j in range(i + 1, len(string) + 1):
+            substrings.append(string[i:j])
+    
+    return substrings
+
+
+import itertools
+
+def get_all_permutations(sequence):
+    """
+    Generates all permutations of a given sequence.
+
+    Parameters:
+    ----------
+    sequence : list or str
+        The sequence (list, string, or tuple) to generate permutations for.
+
+    Returns:
+    -------
+    list
+        A list containing all permutations of the sequence.
+
+    Raises:
+    ------
+    TypeError
+        If the input is not a list, string, or tuple.
+
+    Examples:
+    --------
+    >>> get_all_permutations([1, 2, 3])
+    [(1, 2, 3), (1, 3, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2), (3, 2, 1)]
+
+    >>> get_all_permutations("abc")
+    [('a', 'b', 'c'), ('a', 'c', 'b'), ('b', 'a', 'c'), ('b', 'c', 'a'), ('c', 'a', 'b'), ('c', 'b', 'a')]
+    """
+    if not isinstance(sequence, (list, str, tuple)):
+        raise TypeError("Input must be a list, string, or tuple.")
+    
+    return list(itertools.permutations(sequence))
+
