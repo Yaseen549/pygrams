@@ -1,16 +1,20 @@
-from pygrams.getters import *
 from pygrams.generators import *
+from pygrams.getters import *
 from pygrams.haselements import *
 from pygrams.issers import *
+from pygrams.others import *
 from pygrams.searching import *
 from pygrams.sorting import *
-from pygrams.others import *
 
-from pygrams.dataviz import *
-from pygrams.dateandtimeutils import *
-from pygrams.defaultutils import *
+from pygrams.datamanipulation.dataprocessing import *
+from pygrams.datamanipulation.dataviz import *
+
+from pygrams.utils.algorithmicutils import *
+from pygrams.utils.dateandtimeutils import *
+from pygrams.utils.defaultutils import *
 from pygrams.utils.fileutils import *
-from pygrams.mathutils import *
+from pygrams.utils.mathutils import *
+from pygrams.utils.networkutils import *
 from pygrams.utils.stringutils import *
 
 
