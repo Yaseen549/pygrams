@@ -16,7 +16,7 @@
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.22.zip)
+- [Download the latest release](https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.24.zip)
 - Clone the repo: `git clone https://github.com/Yaseen549/pygrams.git`
 - Install via [PyPI](https://www.pypi.org/): `pip install pygrams`
 
