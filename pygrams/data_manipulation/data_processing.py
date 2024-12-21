@@ -1,3 +1,5 @@
+from itertools import groupby
+
 def normalize_data(data):
     """
     Normalizes a list of numbers to a range of [0, 1].
@@ -96,3 +98,53 @@ def flatten_list(nested_list):
     [1, 2, 3, 4, 5]
     """
     return [item for sublist in nested_list for item in sublist]
+
+
+def filter_null_values(data):
+    """
+    Remove null or undefined values from a list.
+
+    Parameters:
+    ----------
+    data : list
+        The list of values to filter.
+
+    Returns:
+    -------
+    list
+        The filtered list without null or undefined values.
+
+    Examples:
+    --------
+    >>> data = [1, 2, None, 4, 'test', None]
+    >>> filter_null_values(data)
+    [1, 2, 4, 'test']
+    """
+    return [item for item in data if item is not None]
+
+
+def group_by(data, key_func):
+    """
+    Group elements of an array by a key or condition.
+
+    Parameters:
+    ----------
+    data : list
+        The data to group.
+    key_func : function
+        The function to compute the key for each element.
+
+    Returns:
+    -------
+    dict
+        A dictionary with keys as the result of key_func and values as the grouped elements.
+
+    Examples:
+    --------
+    >>> data = ['apple', 'banana', 'avocado', 'blueberry', 'cherry']
+    >>> group_by(data, key_func=lambda x: x[0])
+    {'a': ['apple', 'avocado'], 'b': ['banana', 'blueberry'], 'c': ['cherry']}
+    """
+    data_sorted = sorted(data, key=key_func)  # Sort data by the key
+    grouped = groupby(data_sorted, key_func)  # Group data by the key
+    return {key: list(group) for key, group in grouped}

@@ -1,3 +1,29 @@
+def reverse_string(s):
+    """
+    Reverses the given string.
+
+    Parameters:
+    ----------
+    s : str
+        The string to be reversed.
+
+    Returns:
+    -------
+    str
+        The reversed string.
+
+    Examples:
+    --------
+    >>> reverse_string("hello")
+    'olleh'
+    >>> reverse_string("Python")
+    'nohtyP'
+    """
+    if not isinstance(s, str):
+        raise TypeError("Input must be a string.")
+    return s[::-1]
+
+
 def reverse_words(sentence):
     """
     Reverses the words in a sentence.

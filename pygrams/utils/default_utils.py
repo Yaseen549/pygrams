@@ -1,4 +1,5 @@
 from datetime import datetime
+import hashlib
 
 def days_between(date1, date2):
     """
@@ -171,3 +172,33 @@ def is_weekend(date):
     return date.weekday() >= 5  # 5 and 6 correspond to Saturday and Sunday
 
 
+def generate_hash(data, algorithm='sha256'):
+    """
+    Generate a hash of the given input string using the specified algorithm.
+
+    Parameters:
+    ----------
+    data : str
+        The input string to be hashed.
+    algorithm : str, optional
+        The hash algorithm to use ('md5', 'sha256', etc.). Default is 'sha256'.
+
+    Returns:
+    -------
+    str
+        The resulting hash as a hexadecimal string.
+
+    Examples:
+    --------
+    >>> generate_hash("hello", 'md5')
+    '5d41402abc4b2a76b9719d911017c592'
+    >>> generate_hash("hello", 'sha256')
+    '2cf24dba5fb0a30e26e83b2ac5b9e29e1b1681e03bda6d1d64752c0f6c4d86f4'
+    """
+    try:
+        # Create a hash object based on the algorithm
+        hash_object = hashlib.new(algorithm)
+        hash_object.update(data.encode('utf-8'))  # Update the hash object with the data
+        return hash_object.hexdigest()  # Return the hex representation of the hash
+    except ValueError:
+        raise ValueError(f"Unsupported algorithm: {algorithm}")

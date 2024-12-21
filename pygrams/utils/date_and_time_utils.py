@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
 def days_until(date):
@@ -71,3 +71,86 @@ def add_months_to_date(date, months):
         raise TypeError("Months must be an integer.")
     
     return date + relativedelta(months=months)
+
+
+def get_day_of_week(date):
+    """
+    Gets the day of the week from a given date.
+
+    Parameters:
+    ----------
+    date : str or datetime.date
+        The date to get the day of the week from. It can be a string in the format 'YYYY-MM-DD' or a datetime.date object.
+
+    Returns:
+    -------
+    str
+        The name of the day of the week (e.g., 'Monday', 'Tuesday').
+
+    Examples:
+    --------
+    >>> get_day_of_week('2024-12-21')
+    'Saturday'
+    >>> get_day_of_week(datetime.date(2024, 12, 21))
+    'Saturday'
+    """
+    if isinstance(date, str):
+        date = datetime.datetime.strptime(date, '%Y-%m-%d').date()
+    return date.strftime('%A')
+
+
+def add_hours_to_time(time, hours):
+    """
+    Adds a specific number of hours to a given time.
+
+    Parameters:
+    ----------
+    time : str or datetime.datetime
+        The initial time to which hours will be added. It can be a string in the format 'HH:MM:SS' or a datetime.datetime object.
+    hours : int or float
+        The number of hours to add.
+
+    Returns:
+    -------
+    str
+        The new time after adding the specified hours in 'HH:MM:SS' format.
+
+    Examples:
+    --------
+    >>> add_hours_to_time('12:30:00', 2)
+    '14:30:00'
+    >>> add_hours_to_time(datetime.strptime('12:30:00', '%H:%M:%S'), 2)
+    '14:30:00'
+    """
+    if isinstance(time, str):
+        time = datetime.strptime(time, '%H:%M:%S')
+    new_time = time + timedelta(hours=hours)
+    return new_time.strftime('%H:%M:%S')
+
+
+def format_duration(seconds):
+    """
+    Formats a duration given in seconds into hours, minutes, and seconds.
+
+    Parameters:
+    ----------
+    seconds : int
+        The duration in seconds to format.
+
+    Returns:
+    -------
+    str
+        The formatted duration as 'HH:MM:SS'.
+
+    Examples:
+    --------
+    >>> format_duration(3661)
+    '01:01:01'
+    >>> format_duration(7325)
+    '02:02:05'
+    """
+    hours = seconds // 3600
+    minutes = (seconds % 3600) // 60
+    seconds = seconds % 60
+    return f'{hours:02}:{minutes:02}:{seconds:02}'
+

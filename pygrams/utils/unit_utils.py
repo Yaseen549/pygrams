@@ -777,3 +777,85 @@ def convert_to_miles(meters):
     if not isinstance(meters, (int, float)):
         raise TypeError("meters must be a number.")
     return meters / 1609.34
+
+
+def convert_to_seconds(time_value, time_unit):
+    """
+    Convert time value in hours, minutes, or days to seconds.
+
+    Parameters:
+    ----------
+    time_value : float or int
+        The value to be converted.
+    time_unit : str
+        The unit of time ('hours', 'minutes', or 'days').
+
+    Returns:
+    -------
+    float
+        The equivalent value in seconds.
+
+    Raises:
+    ------
+    ValueError
+        If the time unit is not 'hours', 'minutes', or 'days'.
+
+    Examples:
+    --------
+    >>> convert_to_seconds(1, 'hours')
+    3600.0
+    >>> convert_to_seconds(30, 'minutes')
+    1800.0
+    >>> convert_to_seconds(2, 'days')
+    172800.0
+    """
+    if time_unit == 'hours':
+        return time_value * 3600  # 1 hour = 3600 seconds
+    elif time_unit == 'minutes':
+        return time_value * 60  # 1 minute = 60 seconds
+    elif time_unit == 'days':
+        return time_value * 86400  # 1 day = 86400 seconds
+    else:
+        raise ValueError("Invalid time unit. Please use 'hours', 'minutes', or 'days'.")
+
+
+def convert_to_liters(volume_value, volume_unit):
+    """
+    Convert volume value in various units (gallons, quarts, cups) to liters.
+
+    Parameters:
+    ----------
+    volume_value : float or int
+        The value to be converted.
+    volume_unit : str
+        The unit of volume ('gallons', 'quarts', 'cups').
+
+    Returns:
+    -------
+    float
+        The equivalent value in liters.
+
+    Raises:
+    ------
+    ValueError
+        If the volume unit is not 'gallons', 'quarts', or 'cups'.
+
+    Examples:
+    --------
+    >>> convert_to_liters(1, 'gallons')
+    3.78541
+    >>> convert_to_liters(2, 'quarts')
+    1.892705
+    >>> convert_to_liters(4, 'cups')
+    0.9463525
+    """
+    if volume_unit == 'gallons':
+        return volume_value * 3.78541  # 1 gallon = 3.78541 liters
+    elif volume_unit == 'quarts':
+        return volume_value * 0.946352  # 1 quart = 0.946352 liters
+    elif volume_unit == 'cups':
+        return volume_value * 0.236588  # 1 cup = 0.236588 liters
+    else:
+        raise ValueError("Invalid volume unit. Please use 'gallons', 'quarts', or 'cups'.")
+
+

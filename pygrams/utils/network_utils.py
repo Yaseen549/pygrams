@@ -1,7 +1,7 @@
 import socket
-import os
 import platform
 import subprocess
+import socket
 
 def get_ip_address():
     """
@@ -56,4 +56,36 @@ def ping_host(host):
     try:
         return subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE).returncode == 0
     except Exception:
+        return False
+
+
+def check_port_open(host, port):
+    """
+    Check if a specific port is open on a host.
+
+    Parameters:
+    ----------
+    host : str
+        The host address (e.g., '127.0.0.1' or 'example.com').
+    port : int
+        The port number to check.
+
+    Returns:
+    -------
+    bool
+        True if the port is open, False otherwise.
+
+    Examples:
+    --------
+    >>> check_port_open('localhost', 80)
+    True
+    >>> check_port_open('example.com', 8080)
+    False
+    """
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.settimeout(1)  # 1 second timeout
+            result = s.connect_ex((host, port))  # Returns 0 if connection successful
+            return result == 0
+    except socket.error:
         return False

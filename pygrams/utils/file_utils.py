@@ -1,5 +1,6 @@
 import os
 import shutil
+import json
 
 def read_file(file_path):
     """
@@ -293,3 +294,89 @@ def copy_file(source_path, destination_path):
         raise FileNotFoundError(f"The source file at {source_path} does not exist.")
     
     shutil.copy(source_path, destination_path)
+
+
+def get_file_extension(filename):
+    """
+    Get the extension of a file based on its name.
+
+    Parameters:
+    ----------
+    filename : str
+        The name of the file, including the extension.
+
+    Returns:
+    -------
+    str
+        The file extension, including the dot (e.g., '.txt', '.py').
+
+    Examples:
+    --------
+    >>> get_file_extension('example.txt')
+    '.txt'
+    >>> get_file_extension('image.png')
+    '.png'
+    """
+    return os.path.splitext(filename)[1]
+
+
+def read_json_file(filepath):
+    """
+    Parse and read a JSON file.
+
+    Parameters:
+    ----------
+    filepath : str
+        The path to the JSON file.
+
+    Returns:
+    -------
+    dict
+        The parsed JSON data as a Python dictionary.
+
+    Raises:
+    ------
+    FileNotFoundError
+        If the specified file does not exist.
+    JSONDecodeError
+        If the file is not a valid JSON file.
+
+    Examples:
+    --------
+    >>> read_json_file('data.json')
+    {'name': 'Alice', 'age': 30}
+    """
+    try:
+        with open(filepath, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"The file '{filepath}' does not exist.")
+    except json.JSONDecodeError:
+        raise ValueError(f"The file '{filepath}' is not a valid JSON file.")
+    
+
+def write_json_file(filepath, data):
+    """
+    Write data to a JSON file.
+
+    Parameters:
+    ----------
+    filepath : str
+        The path to the JSON file where data will be written.
+    data : dict
+        The data to be written to the file (should be serializable to JSON).
+
+    Returns:
+    -------
+    None
+
+    Examples:
+    --------
+    >>> write_json_file('output.json', {'name': 'Bob', 'age': 25})
+    """
+    try:
+        with open(filepath, 'w') as file:
+            json.dump(data, file, indent=4)
+    except TypeError:
+        raise ValueError("The data is not serializable to JSON.")
+    
