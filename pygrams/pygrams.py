@@ -1,21 +1,21 @@
 from pygrams.generators import *
 from pygrams.getters import *
-from pygrams.haselements import *
-from pygrams.issers import *
+from pygrams.has_elements import *
+from pygrams.is_elements import *
 from pygrams.others import *
 from pygrams.searching import *
 from pygrams.sorting import *
 
-from pygrams.datamanipulation.dataprocessing import *
-from pygrams.datamanipulation.dataviz import *
+from pygrams.data_manipulation.data_processing import *
+from pygrams.data_manipulation.data_viz import *
 
-from pygrams.utils.algorithmicutils import *
-from pygrams.utils.dateandtimeutils import *
-from pygrams.utils.defaultutils import *
-from pygrams.utils.fileutils import *
-from pygrams.utils.mathutils import *
-from pygrams.utils.networkutils import *
-from pygrams.utils.stringutils import *
+from pygrams.utils.algorithmic_utils import *
+from pygrams.utils.date_and_time_utils import *
+from pygrams.utils.default_utils import *
+from pygrams.utils.file_utils import *
+from pygrams.utils.math_utils import *
+from pygrams.utils.network_utils import *
+from pygrams.utils.string_utils import *
 
 
 def days_in_a_month(year, month):

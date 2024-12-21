@@ -6,10 +6,13 @@
 # Python cache files
 /__pycache__/
 /pygrams/__pycache__
+/pygrams/data_manipulation/__pycache__
+/pygrams/utils/__pycache__
 
 # Distribution and packaging files
 /dist/
 /pygrams.egg-info/
+*.egg-info/
 
 # Test directories and test files
 /test/
@@ -25,6 +28,7 @@ pygrams_test.py
 # Virtual environment directories
 env/
 venv/
+.venv/
 
 # PyInstaller
 *.manifest
