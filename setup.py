@@ -8,10 +8,10 @@ readme = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
   name = 'pygrams',
-  packages = ['pygrams', 'pygrams/datamanipulation', 'pygrams/utils'],
+  packages = ['pygrams', 'pygrams/data_manipulation', 'pygrams/utils'],
   # packages=find_packages(),  # Automatically finds 'pygrams' directory
   # packages=['src'],
-  version = '0.0.24',
+  version = '0.0.25',
   license='MIT',
   description = 'Get python programs handy as a function',
   long_description=readme,
@@ -19,7 +19,7 @@ setup(
   author = 'Yaseen',
   author_email = 'fantasticyaseenshariff@gmail.com',
   url = 'https://pygrams.netlify.app',
-  download_url = 'https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.24.tar.gz',
+  download_url = 'https://github.com/Yaseen549/pygrams/archive/refs/tags/v0.0.25.tar.gz',
   keywords = ['PYTHONPROGRAMS', 'PROGRAMS', 'FUNCTIONS', 'PYGRAMS'],
   install_requires=[],
   classifiers=[
