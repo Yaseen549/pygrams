@@ -1,3 +1,41 @@
+def find_mean(numbers):
+    """
+    Calculate the mean (average) of a list of numbers.
+
+    Parameters:
+    ----------
+    numbers : list of int or float
+        A list of numerical values.
+
+    Returns:
+    -------
+    float
+        The mean of the numbers in the list.
+
+    Raises:
+    ------
+    ValueError
+        If the list is empty.
+    TypeError
+        If the elements in the list are not numerical.
+
+    Examples:
+    --------
+    >>> find_mean([1, 2, 3, 4, 5])
+    3.0
+
+    >>> find_mean([10, 20, 30])
+    20.0
+    """
+    if not numbers:
+        raise ValueError("The list of numbers cannot be empty.")
+    
+    if not all(isinstance(n, (int, float)) for n in numbers):
+        raise TypeError("All elements in the list must be numerical values.")
+    
+    return sum(numbers) / len(numbers)
+
+
 def find_median(numbers):
     """
     Finds the median of a list of numbers.

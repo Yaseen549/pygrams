@@ -1,4 +1,5 @@
 import random
+import uuid
 
 
 def generate_random_color(format='hex'):
@@ -229,47 +230,6 @@ def generate_fibonacci_numbers(n):
         a, b = b, a + b
     return fibonacci
 
-
-def generate_palindromes(n):
-    """
-    Generates the first n palindrome numbers.
-
-    Parameters:
-    ----------
-    n : int
-        The number of palindromes to generate.
-
-    Returns:
-    -------
-    list
-        A list containing the first n palindrome numbers.
-
-    Raises:
-    ------
-    ValueError
-        If n is not a positive integer.
-
-    Examples:
-    --------
-    >>> generate_palindromes(5)
-    [1, 2, 3, 4, 5]
-
-    >>> generate_palindromes(10)
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
-    """
-    if not isinstance(n, int) or n <= 0:
-        raise ValueError("Input must be a positive integer.")
-
-    palindromes = []
-    num = 1
-    while len(palindromes) < n:
-        if str(num) == str(num)[::-1]:  # Check if the number is a palindrome
-            palindromes.append(num)
-        num += 1
-    return palindromes
-
-
-import uuid
 
 def generate_uuid():
     """

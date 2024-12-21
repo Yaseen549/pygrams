@@ -401,32 +401,3 @@ def snake_to_title_case(text):
     """
     return ' '.join(word.capitalize() for word in text.split('_'))
 
-
-def word_count(text):
-    """
-    Returns the count of words in a text.
-
-    Parameters:
-    ----------
-    text : str
-        The text to count words in.
-
-    Returns:
-    -------
-    int
-        The count of words in the text.
-
-    Examples:
-    --------
-    >>> word_count("Hello world!")
-    2
-
-    >>> word_count("This is a test sentence.")
-    5
-    """
-    if not isinstance(text, str):
-        raise TypeError("Input must be a string.")
-    
-    # Split the text into words based on whitespace and count the number of words
-    return len(text.split())
-

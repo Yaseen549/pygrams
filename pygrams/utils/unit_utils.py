@@ -819,6 +819,202 @@ def convert_to_seconds(time_value, time_unit):
         raise ValueError("Invalid time unit. Please use 'hours', 'minutes', or 'days'.")
 
 
+def convert_to_minutes(time_value, time_unit):
+    """
+    Convert time value in seconds, hours, or days to minutes.
+
+    Parameters:
+    ----------
+    time_value : float or int
+        The value to be converted.
+    time_unit : str
+        The unit of time ('seconds', 'hours', or 'days').
+
+    Returns:
+    -------
+    float
+        The equivalent value in minutes.
+
+    Raises:
+    ------
+    ValueError
+        If the time unit is not 'seconds', 'hours', or 'days'.
+
+    Examples:
+    --------
+    >>> convert_to_minutes(3600, 'seconds')
+    60.0
+    >>> convert_to_minutes(2, 'hours')
+    120.0
+    >>> convert_to_minutes(1, 'days')
+    1440.0
+    """
+    if time_unit == 'seconds':
+        return time_value / 60  # 1 minute = 60 seconds
+    elif time_unit == 'hours':
+        return time_value * 60  # 1 hour = 60 minutes
+    elif time_unit == 'days':
+        return time_value * 1440  # 1 day = 1440 minutes
+    else:
+        raise ValueError("Invalid time unit. Please use 'seconds', 'hours', or 'days'.")
+
+
+def convert_to_hours(time_value, time_unit):
+    """
+    Convert time value in seconds, minutes, or days to hours.
+
+    Parameters:
+    ----------
+    time_value : float or int
+        The value to be converted.
+    time_unit : str
+        The unit of time ('seconds', 'minutes', or 'days').
+
+    Returns:
+    -------
+    float
+        The equivalent value in hours.
+
+    Raises:
+    ------
+    ValueError
+        If the time unit is not 'seconds', 'minutes', or 'days'.
+
+    Examples:
+    --------
+    >>> convert_to_hours(3600, 'seconds')
+    1.0
+    >>> convert_to_hours(120, 'minutes')
+    2.0
+    >>> convert_to_hours(1, 'days')
+    24.0
+    """
+    if time_unit == 'seconds':
+        return time_value / 3600  # 1 hour = 3600 seconds
+    elif time_unit == 'minutes':
+        return time_value / 60  # 1 hour = 60 minutes
+    elif time_unit == 'days':
+        return time_value * 24  # 1 day = 24 hours
+    else:
+        raise ValueError("Invalid time unit. Please use 'seconds', 'minutes', or 'days'.")
+
+
+def convert_to_days(time_value, time_unit):
+    """
+    Convert time value in seconds, minutes, or hours to days.
+
+    Parameters:
+    ----------
+    time_value : float or int
+        The value to be converted.
+    time_unit : str
+        The unit of time ('seconds', 'minutes', or 'hours').
+
+    Returns:
+    -------
+    float
+        The equivalent value in days.
+
+    Raises:
+    ------
+    ValueError
+        If the time unit is not 'seconds', 'minutes', or 'hours'.
+
+    Examples:
+    --------
+    >>> convert_to_days(86400, 'seconds')
+    1.0
+    >>> convert_to_days(1440, 'minutes')
+    1.0
+    >>> convert_to_days(24, 'hours')
+    1.0
+    """
+    if time_unit == 'seconds':
+        return time_value / 86400  # 1 day = 86400 seconds
+    elif time_unit == 'minutes':
+        return time_value / 1440  # 1 day = 1440 minutes
+    elif time_unit == 'hours':
+        return time_value / 24  # 1 day = 24 hours
+    else:
+        raise ValueError("Invalid time unit. Please use 'seconds', 'minutes', or 'hours'.")
+
+
+def convert_to_months(time_value, time_unit):
+    """
+    Convert time value in days or years to months.
+
+    Parameters:
+    ----------
+    time_value : float or int
+        The value to be converted.
+    time_unit : str
+        The unit of time ('days' or 'years').
+
+    Returns:
+    -------
+    float
+        The equivalent value in months.
+
+    Raises:
+    ------
+    ValueError
+        If the time unit is not 'days' or 'years'.
+
+    Examples:
+    --------
+    >>> convert_to_months(30, 'days')
+    1.0
+    >>> convert_to_months(1, 'years')
+    12.0
+    """
+    if time_unit == 'days':
+        return time_value / 30  # 1 month = ~30 days (approximation)
+    elif time_unit == 'years':
+        return time_value * 12  # 1 year = 12 months
+    else:
+        raise ValueError("Invalid time unit. Please use 'days' or 'years'.")
+
+
+def convert_to_years(time_value, time_unit):
+    """
+    Convert time value in days, months, or hours to years.
+
+    Parameters:
+    ----------
+    time_value : float or int
+        The value to be converted.
+    time_unit : str
+        The unit of time ('days', 'months', or 'hours').
+
+    Returns:
+    -------
+    float
+        The equivalent value in years.
+
+    Raises:
+    ------
+    ValueError
+        If the time unit is not 'days', 'months', or 'hours'.
+
+    Examples:
+    --------
+    >>> convert_to_years(365, 'days')
+    1.0
+    >>> convert_to_years(12, 'months')
+    1.0
+    >>> convert_to_years(8760, 'hours')
+    1.0
+    """
+    if time_unit == 'days':
+        return time_value / 365  # 1 year = 365 days
+    elif time_unit == 'months':
+        return time_value / 12  # 1 year = 12 months
+    elif time_unit == 'hours':
+        return time_value / 8760  # 1 year = 8760 hours (365 days * 24 hours)
+    else:
+        raise ValueError("Invalid time unit. Please use 'days', 'months', or 'hours'.")
+
+
 def convert_to_liters(volume_value, volume_unit):
     """
     Convert volume value in various units (gallons, quarts, cups) to liters.
@@ -857,5 +1053,4 @@ def convert_to_liters(volume_value, volume_unit):
         return volume_value * 0.236588  # 1 cup = 0.236588 liters
     else:
         raise ValueError("Invalid volume unit. Please use 'gallons', 'quarts', or 'cups'.")
-
 

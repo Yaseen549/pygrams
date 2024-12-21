@@ -170,7 +170,73 @@ def count_words(text):
     return len(words)
 
 
-def longest_word(sentence):
+def count_letters(text):
+    """
+    Returns the count of letters in a string.
+
+    Parameters:
+    ----------
+    text : str
+        A string to count letters.
+
+    Returns:
+    -------
+    int
+        The number of letters in the string.
+
+    Raises:
+    ------
+    TypeError
+        If the input is not a string.
+
+    Examples:
+    --------
+    >>> count_letters("Hello World")
+    10
+
+    >>> count_letters("Python 3.8 is awesome!")
+    17
+    """
+    if not isinstance(text, str):
+        raise TypeError("Input must be a string.")
+    
+    return sum(1 for char in text if char.isalpha())
+
+
+def count_sentences(text):
+    """
+    Returns the count of sentences in a string.
+
+    Parameters:
+    ----------
+    text : str
+        A string to count sentences.
+
+    Returns:
+    -------
+    int
+        The number of sentences in the string.
+
+    Raises:
+    ------
+    TypeError
+        If the input is not a string.
+
+    Examples:
+    --------
+    >>> count_sentences("Hello World. Python is awesome!")
+    2
+
+    >>> count_sentences("This is sentence one. Here's sentence two!")
+    2
+    """
+    if not isinstance(text, str):
+        raise TypeError("Input must be a string.")
+    
+    return sum(1 for char in text if char in '.!?')
+
+
+def find_longest_word(sentence):
     """
     Finds the longest word in a sentence.
 
@@ -191,10 +257,10 @@ def longest_word(sentence):
 
     Examples:
     --------
-    >>> longest_word("The quick brown fox jumped over the lazy dog")
+    >>> find_longest_word("The quick brown fox jumped over the lazy dog")
     'jumped'
 
-    >>> longest_word("Python is awesome")
+    >>> find_longest_word("Python is awesome")
     'awesome'
     """
     if not isinstance(sentence, str):
@@ -205,7 +271,7 @@ def longest_word(sentence):
     return longest
 
 
-def shortest_word(sentence):
+def find_shortest_word(sentence):
     """
     Finds the shortest word in a sentence.
 
@@ -226,10 +292,10 @@ def shortest_word(sentence):
 
     Examples:
     --------
-    >>> shortest_word("The quick brown fox jumped over the lazy dog")
+    >>> find_shortest_word("The quick brown fox jumped over the lazy dog")
     'The'
 
-    >>> shortest_word("Python is awesome")
+    >>> find_shortest_word("Python is awesome")
     'is'
     """
     if not isinstance(sentence, str):
