@@ -203,6 +203,205 @@ def snake_to_camel_case(string):
     return parts[0] + ''.join(word.capitalize() for word in parts[1:])
 
 
+def kebab_to_snake_case(text):
+    """
+    Convert a string from kebab-case to snake_case.
+
+    Parameters:
+    ----------
+    text : str
+        The kebab-case string.
+
+    Returns:
+    -------
+    str
+        The string converted to snake_case.
+
+    Examples:
+    --------
+    >>> kebab_to_snake_case("hello-world-example")
+    'hello_world_example'
+    """
+    return text.replace("-", "_")
+
+
+def snake_to_kebab_case(text):
+    """
+    Convert a string from snake_case to kebab-case.
+
+    Parameters:
+    ----------
+    text : str
+        The snake_case string.
+
+    Returns:
+    -------
+    str
+        The string converted to kebab-case.
+
+    Examples:
+    --------
+    >>> snake_to_kebab_case("hello_world_example")
+    'hello-world-example'
+    """
+    return text.replace("_", "-")
+
+
+def kebab_to_camel_case(text):
+    """
+    Convert a string from kebab-case to camelCase.
+
+    Parameters:
+    ----------
+    text : str
+        The kebab-case string.
+
+    Returns:
+    -------
+    str
+        The string converted to camelCase.
+
+    Examples:
+    --------
+    >>> kebab_to_camel_case("hello-world-example")
+    'helloWorldExample'
+    """
+    words = text.split('-')
+    return words[0] + ''.join(word.capitalize() for word in words[1:])
+
+
+def snake_to_pascal_case(text):
+    """
+    Convert a string from snake_case to PascalCase.
+
+    Parameters:
+    ----------
+    text : str
+        The snake_case string.
+
+    Returns:
+    -------
+    str
+        The string converted to PascalCase.
+
+    Examples:
+    --------
+    >>> snake_to_pascal_case("hello_world_example")
+    'HelloWorldExample'
+    """
+    return ''.join(word.capitalize() for word in text.split('_'))
+
+
+def pascal_to_snake_case(text):
+    """
+    Convert a string from PascalCase to snake_case.
+
+    Parameters:
+    ----------
+    text : str
+        The PascalCase string.
+
+    Returns:
+    -------
+    str
+        The string converted to snake_case.
+
+    Examples:
+    --------
+    >>> pascal_to_snake_case("HelloWorldExample")
+    'hello_world_example'
+    """
+    return re.sub(r'(?<!^)(?=[A-Z])', '_', text).lower()
+
+
+def kebab_to_pascal_case(text):
+    """
+    Convert a string from kebab-case to PascalCase.
+
+    Parameters:
+    ----------
+    text : str
+        The kebab-case string.
+
+    Returns:
+    -------
+    str
+        The string converted to PascalCase.
+
+    Examples:
+    --------
+    >>> kebab_to_pascal_case("hello-world-example")
+    'HelloWorldExample'
+    """
+    return ''.join(word.capitalize() for word in text.split('-'))
+
+
+def pascal_to_kebab_case(text):
+    """
+    Convert a string from PascalCase to kebab-case.
+
+    Parameters:
+    ----------
+    text : str
+        The PascalCase string.
+
+    Returns:
+    -------
+    str
+        The string converted to kebab-case.
+
+    Examples:
+    --------
+    >>> pascal_to_kebab_case("HelloWorldExample")
+    'hello-world-example'
+    """
+    return re.sub(r'(?<!^)(?=[A-Z])', '-', text).lower()
+
+
+def title_to_snake_case(text):
+    """
+    Convert a string from Title Case to snake_case.
+
+    Parameters:
+    ----------
+    text : str
+        The Title Case string.
+
+    Returns:
+    -------
+    str
+        The string converted to snake_case.
+
+    Examples:
+    --------
+    >>> title_to_snake_case("Hello World Example")
+    'hello_world_example'
+    """
+    return text.lower().replace(' ', '_')
+
+
+def snake_to_title_case(text):
+    """
+    Convert a string from snake_case to Title Case.
+
+    Parameters:
+    ----------
+    text : str
+        The snake_case string.
+
+    Returns:
+    -------
+    str
+        The string converted to Title Case.
+
+    Examples:
+    --------
+    >>> snake_to_title_case("hello_world_example")
+    'Hello World Example'
+    """
+    return ' '.join(word.capitalize() for word in text.split('_'))
+
+
 def word_count(text):
     """
     Returns the count of words in a text.
@@ -230,3 +429,4 @@ def word_count(text):
     
     # Split the text into words based on whitespace and count the number of words
     return len(text.split())
+
