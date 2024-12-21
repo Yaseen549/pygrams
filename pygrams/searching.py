@@ -1,4 +1,5 @@
 # Searching
+import math
 
 # Binary Search
 def binary_search(arr, element):
@@ -116,8 +117,6 @@ def ternary_search(sorted_list, target):
     
     return -1
 
-
-import math
 
 def jump_search(sorted_list, target):
     """

@@ -1,5 +1,6 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 import hashlib
+
 
 def days_between(date1, date2):
     """
@@ -45,8 +46,6 @@ def days_between(date1, date2):
     delta = date2 - date1
     return abs(delta.days)
 
-
-from datetime import timedelta
 
 def add_days(date, days):
     """

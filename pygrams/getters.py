@@ -1,5 +1,6 @@
 from datetime import datetime, date
 import inspect
+import itertools
 
 
 # Function to get unique elements from str, list/tuple, dict
@@ -688,8 +689,6 @@ def get_substrings(string):
     
     return substrings
 
-
-import itertools
 
 def get_all_permutations(sequence):
     """

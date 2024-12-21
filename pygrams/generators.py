@@ -1,5 +1,6 @@
 import random
 import uuid
+import string
 
 
 def generate_random_color(format='hex'):
@@ -247,9 +248,6 @@ def generate_uuid():
     """
     return str(uuid.uuid4())
 
-
-import random
-import string
 
 def generate_password(length, options=None):
     """

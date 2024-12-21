@@ -1,3 +1,6 @@
+import re
+
+
 def is_armstrong(number):
     """
     Checks if a number is an Armstrong number.
@@ -375,8 +378,6 @@ def is_happy_number(number):
     
     return number == 1
 
-
-import re
 
 def is_valid_email(email):
     """
